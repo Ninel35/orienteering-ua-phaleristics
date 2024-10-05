@@ -1,0 +1,36 @@
+.searchForm{
+    /* padding-top: 5vh;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px; */
+    background-color: white;
+    width: 300px;
+    border-radius: 10px;
+    height: 2.5rem;
+    padding: 0 15px;
+    box-shadow: 0px 0px 8px #ddd;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+}
+input{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 1.25rem;
+    width: 100%;
+    margin-left: 5px;
+}
+input:focus{
+    outline: none;
+}
+.icon{
+    color: aqua;
+}

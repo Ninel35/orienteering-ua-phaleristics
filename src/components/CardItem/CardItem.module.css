@@ -1,0 +1,7 @@
+.card{
+    width: 250px;
+    display: block;
+    border: solid;
+    justify-content: center;
+    align-items: center;
+}

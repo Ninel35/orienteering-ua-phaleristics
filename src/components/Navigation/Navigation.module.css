@@ -48,3 +48,15 @@ nav a:hover{
 .sidebar a{
     width: 100%;
 }
+
+@media (max-width: 800px){
+.mobileOn{
+    display: none;
+}
+}
+
+@media (min-width: 800px){
+    .mobileOff{
+        display: none;
+    }
+    }
