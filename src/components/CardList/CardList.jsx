@@ -1,62 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import CardItem from "../CardItem/CardItem"
 import css from "./CardList.module.css"
+import {useDispatch, useSelector} from  "react-redux"
+import { fetchNewses } from "../../redux/articleSlice";
 
-
-
-
- const CardList =  () => {
-  const [loading, setLoading] =useState(false)
-  const [error, setError] = useState(null)
-  const [news, setNews] = useState([])
-
-  const HYGRAPH_ENDPOINT = "";
-  
+const CardList =  () => {
+  const news = useSelector((state) => state.news)
+  const dispatch = useDispatch()
   useEffect(()=>{
-    const fetchData = async () => {
-    try {
-      setLoading(true)
-      const response = await fetch(HYGRAPH_ENDPOINT, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          query: `{
-          newses {
-            id
-            title
-            photo {
-              url
-            }
-          }
-        }`,
-        }),
-      })
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`)
-      }
-    
-      const json = await response.json();
-      setNews(json.data.newses.reverse())
-    } catch (error) {
-      setError('Error fetching data. Please check the console for details.');
-    }finally{
-      setLoading(false)
-    }
-    };
-    fetchData();
-  }, []);
+  dispatch(fetchNewses())
+  }, [])
   
- return (
-    <ul className={css.listCard}>
-      {loading && <div>Loading</div>}
-      {error && <div>Something wrong</div>}
-    {news.map((result, id) => {
-        return <CardItem result={result} key={id}/>
-})}
-</ul>
-  )
+ return <ul className={css.listCard}>
+      {news.loading && <div>Loading</div>}
+      {!news.loading && news.error ? <div>Something went wrong: {news.error}</div> : null}
+      {!news.loading && news.newses.length ? news.newses.map((result) => {
+        console.log(result)
+        return <CardItem result={result} key={result.id}/>}) : null}
+    </ul>
 }
 
 export default CardList

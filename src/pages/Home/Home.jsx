@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <main >
-      {/* <SearchForm setResults={setResults}/> */}
+      <SearchForm/>
       {/* <Filter /> */}
 {/* <CardList results={results}/> */}
 <CardList/>

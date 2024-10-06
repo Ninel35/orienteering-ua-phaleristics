@@ -22,7 +22,7 @@ const SearchForm = ({setResults}) => {
     //     });
 
     // }
-    setResults(data)
+    // setResults(data)
 
     const handleChange =(value)=>{
         setInput(value)

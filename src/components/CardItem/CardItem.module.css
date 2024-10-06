@@ -1,7 +1,14 @@
 .card{
+    margin-top: 15px;
     width: 250px;
     display: block;
     border: solid;
     justify-content: center;
     align-items: center;
+}
+.picture{
+    margin-top: 20px; 
+    margin-bottom: auto;
+    margin-left: 20px;
+    margin-right: auto; 
 }
