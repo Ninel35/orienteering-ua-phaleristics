@@ -1,15 +1,10 @@
-import { useEffect } from "react";
 import CardItem from "../CardItem/CardItem"
 import css from "./CardList.module.css"
-import {useDispatch, useSelector} from  "react-redux"
-import { fetchNewses } from "../../redux/articleSlice";
+import { useSelector} from  "react-redux"
 
 const CardList =  () => {
   const news = useSelector((state) => state.news)
-  const dispatch = useDispatch()
-  useEffect(()=>{
-  dispatch(fetchNewses())
-  }, [])
+  
   
  return <ul className={css.listCard}>
       {news.loading && <div>Loading</div>}

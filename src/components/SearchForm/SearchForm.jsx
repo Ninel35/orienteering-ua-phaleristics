@@ -1,32 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import css from "./SearchForm.module.css";
 import { FaSearch } from "react-icons/fa";
-import { data } from "../../data";
+import { useDispatch } from "react-redux";
+import { fetchNewses } from "../../redux/articleSlice";
 
-const SearchForm = ({setResults}) => {
+const SearchForm = () => {
     const [input, setInput] = useState("")
+    const dispatch = useDispatch()
 
-    // const fetchData = (value) =>{
-    //     fetch("https://jsonplaceholder.typicode.com/users")
-    //     .then((response) => response.json())
-    //     .then(json => {
-    //         const results = json.filter((user)=> {
-    //             return (
-    //                 value && 
-    //             user && 
-    //             user.name && 
-    //             user.name.toLowerCase().includes(value)
-    //          );
-    //             });
-    //        setResults(results);
-    //     });
-
-    // }
-    // setResults(data)
+    useEffect(()=>{
+      dispatch(fetchNewses(input))
+      }, [input])
 
     const handleChange =(value)=>{
         setInput(value)
-        // fetchData(value)
     }
 
   return (
