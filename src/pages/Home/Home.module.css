@@ -1,4 +1,4 @@
-main{
-   
-
+.filterCardList{
+    width: 100%;
+    display: flex;
 }

@@ -1,0 +1,10 @@
+.filter{
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .filter {
+        display: block;
+        width: 20%;
+    }
+  }
