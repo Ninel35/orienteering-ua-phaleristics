@@ -22,6 +22,7 @@ export const fetchNewses = createAsyncThunk(
               photo {
                 url
               }
+              categories
             }
           }`,
           variables: {

@@ -4,13 +4,19 @@ import { useSelector} from  "react-redux"
 
 const CardList =  () => {
   const news = useSelector((state) => state.news)
-  
+  const filter = useSelector((state)=> state.filter.filter)
   
  return <ul className={css.listCard}>
       {news.loading && <div>Loading</div>}
       {!news.loading && news.error ? <div>Something went wrong: {news.error}</div> : null}
       {!news.loading && news.newses.length ? news.newses.map((result) => {
-        console.log(result)
+        if(filter!==""){
+          if(result.categories.includes(filter)){
+            return <CardItem result={result} key={result.id}/>
+          }else{
+            return null
+          }
+        }
         return <CardItem result={result} key={result.id}/>}) : null}
     </ul>
 }
