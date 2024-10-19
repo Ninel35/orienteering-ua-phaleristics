@@ -3,6 +3,7 @@ import css from "./Filter.module.css";
 import { setFilterAction } from "../../redux/filterSlice";
 const Filter = () => {
   const dispatch = useDispatch();
+  
   function selectCategory(evt) {
     evt.preventDefault();
     if (evt.target === evt.currentTarget) return;
@@ -19,38 +20,38 @@ const Filter = () => {
         <li data-source="ukrainianWinterChampionship">
           Чемпіонати України зимові
         </li>
-        <li>Українські чемпіонати ДСТ та відомств</li>
-        <li>Міжнародні змагання</li>
-        <li>Туристичні змагання</li>
-        <li>Інші змагання</li>
+        <li data-source="dstIVidomstva">Українські чемпіонати ДСТ та відомств</li>
+        <li data-source="internationalCompetition">Міжнародні змагання</li>
+        <li data-source="touristCompetition">Туристичні змагання</li>
+        <li data-source="otherCompetition">Інші змагання</li>
         <li>
           Змагання по областях України
           <ul>
-            <li>Вінницька</li>
-            <li>Волинська</li>
-            <li>Дніпропетровська</li>
-            <li>Донецька</li>
-            <li>Житомирська</li>
-            <li>Закарпатська</li>
-            <li>Запорізька</li>
-            <li>Івано-Франківська</li>
-            <li>Київська</li>
-            <li>Кіровоградська</li>
-            <li>Кримська</li>
-            <li>Луганська</li>
-            <li>Львівська</li>
-            <li>Миколаївська</li>
-            <li>Одеська</li>
-            <li>Полтавська</li>
-            <li>Рівненська</li>
-            <li>Сумська</li>
-            <li>Тернопільська</li>
-            <li>Харківська</li>
-            <li>Херсонська</li>
-            <li>Хмельницька</li>
-            <li>Черкаська</li>
-            <li>Чернівецька</li>
-            <li>Чернігівська</li>
+            <li data-source="vinnytska">Вінницька</li>
+            <li data-source="volynska">Волинська</li>
+            <li data-source="dnipro">Дніпропетровська</li>
+            <li data-source="donetska">Донецька</li>
+            <li data-source="zhytomyrska">Житомирська</li>
+            <li data-source="zakarpatska">Закарпатська</li>
+            <li data-source="zaporizska">Запорізька</li>
+            <li data-source="ivanofrankivsk">Івано-Франківська</li>
+            <li data-source="kyivska">Київська</li>
+            <li data-source="kirovogradska">Кіровоградська</li>
+            <li data-source="krymska">Кримська</li>
+            <li data-source="luganska">Луганська</li>
+            <li data-source="lvivska">Львівська</li>
+            <li data-source="mykolaivska">Миколаївська</li>
+            <li data-source="odeska">Одеська</li>
+            <li data-source="poltavska">Полтавська</li>
+            <li data-source="rivnenska">Рівненська</li>
+            <li data-source="sumska">Сумська</li>
+            <li data-source="ternopilska">Тернопільська</li>
+            <li data-source="kharkivska">Харківська</li>
+            <li data-source="khersonska">Херсонська</li>
+            <li data-source="khmelnytska">Хмельницька</li>
+            <li data-source="cherkaska">Черкаська</li>
+            <li data-source="chernivetska">Чернівецька</li>
+            <li data-source="chernigivska">Чернігівська</li>
           </ul>
         </li>
       </ul>
