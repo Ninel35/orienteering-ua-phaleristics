@@ -3,12 +3,12 @@ import css from "./Filter.module.css";
 import { setFilterAction } from "../../redux/filterSlice";
 const Filter = () => {
   const dispatch = useDispatch();
-  
+
   function selectCategory(evt) {
     evt.preventDefault();
     if (evt.target === evt.currentTarget) return;
 
-    dispatch(setFilterAction(evt.target.dataset.source))
+    dispatch(setFilterAction(evt.target.dataset.source));
   }
 
   return (
@@ -20,7 +20,9 @@ const Filter = () => {
         <li data-source="ukrainianWinterChampionship">
           Чемпіонати України зимові
         </li>
-        <li data-source="dstIVidomstva">Українські чемпіонати ДСТ та відомств</li>
+        <li data-source="dstIVidomstva">
+          Українські чемпіонати ДСТ та відомств
+        </li>
         <li data-source="internationalCompetition">Міжнародні змагання</li>
         <li data-source="touristCompetition">Туристичні змагання</li>
         <li data-source="otherCompetition">Інші змагання</li>

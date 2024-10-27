@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import css from "./CardItem.module.css";
 
-const CardItem = ({ result }) => {
+const CardItem = ({ result, location }) => {
   return (
     <li className={css.card}>
       <p>{result.title}</p>
@@ -10,7 +11,7 @@ const CardItem = ({ result }) => {
         alt={result.title}
         // width="150"
       />
-      <button className={css.readMoreBtn}>Read more</button>
+      <Link to={result.id} className={css.readMoreBtn} state={{backLink:location}}>Read more</Link>
     </li>
   );
 };

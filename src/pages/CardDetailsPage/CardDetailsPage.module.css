@@ -1,0 +1,29 @@
+.backLink{
+   margin: 30px 10px 20px 20px;
+   text-decoration: none;
+   color: rgb(144, 206, 206);
+   cursor: pointer;
+}
+.backLink:hover{
+    color: rgb(41, 41, 241);
+}
+
+.content{
+   padding: 50px;
+}
+
+.title{
+    color:aqua;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+.photo{
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    float: left;
+    width: 200px;
+}

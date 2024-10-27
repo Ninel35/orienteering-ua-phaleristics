@@ -23,6 +23,7 @@ nav a{
 }
 nav a:hover{
     background-color: #F0f0f0;
+    color: rgb(52, 52, 235);
 }
 
 .sidebar{

@@ -11,6 +11,7 @@ import Home from './pages/Home/Home'
 import RootLayout from './layouts/RootLayout'
 import About from './pages/About/About'
 import News from './pages/News/News'
+import CardDetailsPage from './pages/CardDetailsPage/CardDetailsPage'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='about'element={<About />}/>
       <Route path='news' element={<News/>}/>
+      <Route path=':id' element={<CardDetailsPage/>}/>
     </Route>
 )
 ) 
