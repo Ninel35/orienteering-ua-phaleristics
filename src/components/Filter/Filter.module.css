@@ -1,10 +1,23 @@
-.filter{
+.filter {
     display: none;
 }
-.filter>ul li{
+.filter > ul li {
     list-style: none;
-}
+    
+   }
 
+.filter > ul li[data-source]{
+    cursor: pointer;
+
+}
+.oblast{
+    color: rgb(14, 80, 233);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.regions{
+    padding-left: 10px;
+}
 
 @media (min-width: 800px) {
     .filter {
@@ -12,5 +25,14 @@
         width: 20%;
         color: blue;
         margin-left: 15px;
+        height: 80vh;
+        overflow-y: auto; 
+        position: sticky;
+        top: 50px;
        }
   }
+  /* .filterFixed{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} */

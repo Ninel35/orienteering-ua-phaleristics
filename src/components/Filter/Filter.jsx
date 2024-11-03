@@ -1,7 +1,12 @@
 import { useDispatch } from "react-redux";
 import css from "./Filter.module.css";
 import { setFilterAction } from "../../redux/filterSlice";
+
+
+
 const Filter = () => {
+
+
   const dispatch = useDispatch();
 
   function selectCategory(evt) {
@@ -12,8 +17,9 @@ const Filter = () => {
   }
 
   return (
-    <aside className={css.filter}>
+    <aside className={css.filter} >
       <ul onClick={selectCategory}>
+        <li data-source=""><b>All Categories</b></li>
         <li data-source="ukrainianSummerChampionship">
           Чемпіонати України літні
         </li>
@@ -26,9 +32,10 @@ const Filter = () => {
         <li data-source="internationalCompetition">Міжнародні змагання</li>
         <li data-source="touristCompetition">Туристичні змагання</li>
         <li data-source="otherCompetition">Інші змагання</li>
-        <li>
-          Змагання по областях України
-          <ul>
+        </ul>
+        
+        <p className={css.oblast}>Змагання по областях України</p>
+          <ul onClick={selectCategory} className={css.regions}>
             <li data-source="vinnytska">Вінницька</li>
             <li data-source="volynska">Волинська</li>
             <li data-source="dnipro">Дніпропетровська</li>
@@ -55,8 +62,8 @@ const Filter = () => {
             <li data-source="chernivetska">Чернівецька</li>
             <li data-source="chernigivska">Чернігівська</li>
           </ul>
-        </li>
-      </ul>
+       
+     
     </aside>
   );
 };

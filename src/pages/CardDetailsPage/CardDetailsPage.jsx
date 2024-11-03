@@ -32,7 +32,7 @@ const CardDetailsPage = () => {
   <Link to={backLink.current} className={css.backLink}>back</Link>
   <h2 className={css.title}>{data.title}</h2>
   <div className={css.content}>
-    <img className={css.photo} src={data.photo.url} />
+    <img className={css.photo} src={data.photo[0]?.url} />
     <p className={css.text}>{data.text}</p>
   </div>
   </>;

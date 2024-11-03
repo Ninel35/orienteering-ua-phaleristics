@@ -1,0 +1,11 @@
+header{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Orienteering.jpg/1200px-Orienteering.jpg");
+    height: 60vh;
+  display: flex;
+  flex-direction: column-reverse;
+ 
+}
+h1{
+    color: rgb(242, 237, 237);
+    margin: auto;
+}

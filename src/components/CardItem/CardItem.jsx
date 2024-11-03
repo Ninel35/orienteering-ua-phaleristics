@@ -7,7 +7,7 @@ const CardItem = ({ result, location }) => {
       <p>{result.title}</p>
       <img
         className={css.picture}
-        src={result.photo.url}
+        src={result.photo[0]?.url}
         alt={result.title}
         // width="150"
       />

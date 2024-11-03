@@ -1,6 +1,9 @@
 nav{
    background-color: white;
    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+   position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 nav ul{
@@ -9,6 +12,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    
 }
 nav li{
     height: 50px;
