@@ -16,7 +16,7 @@ export const fetchNewses = createAsyncThunk(
         HYGRAPH_ENDPOINT,
         JSON.stringify({
           query: `query ($searchString: String!) {
-            newses(where: { title_contains: $searchString }) {
+            newses(where: { title_contains: $searchString }, first: 100) {
               id
               title
               photo {

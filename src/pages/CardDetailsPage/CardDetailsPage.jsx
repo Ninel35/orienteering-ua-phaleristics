@@ -2,6 +2,7 @@ import axios from "axios";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import css from "./CardDetailsPage.module.css";
+import Slider from "../../components/Slider/Slider";
 
 const CardDetailsPage = () => {
   const { id } = useParams();
@@ -32,7 +33,7 @@ const CardDetailsPage = () => {
   <Link to={backLink.current} className={css.backLink}>back</Link>
   <h2 className={css.title}>{data.title}</h2>
   <div className={css.content}>
-    <img className={css.photo} src={data.photo[0]?.url} />
+    <Slider data={data.photo}/>
     <p className={css.text}>{data.text}</p>
   </div>
   </>;
