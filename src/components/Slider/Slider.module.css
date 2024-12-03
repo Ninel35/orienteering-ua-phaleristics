@@ -5,6 +5,7 @@
 .slide{
     max-height: 300px; 
     max-width: 400px;
+   
 }
 .slider{
     display: flex;
@@ -14,7 +15,7 @@
     height: 320px;
     background-color:rgb(223, 219, 219);
     float: left;
-    margin-right: 10px;
+    margin-right: 30px;
     margin-bottom: 10px;
 }
 .arrow{
@@ -26,4 +27,7 @@ cursor: pointer;
 }
 .arrow:hover{
     background-color: rgb(235, 193, 142);
+}
+.slides{
+    margin: auto;
 }

@@ -3,6 +3,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import css from "./CardDetailsPage.module.css";
 import Slider from "../../components/Slider/Slider";
+import Showdown from "showdown";
+import parse from 'html-react-parser';
 
 const CardDetailsPage = () => {
   const { id } = useParams();
@@ -15,6 +17,10 @@ const CardDetailsPage = () => {
   const getDetails = useCallback( async (id) => {
     try {
         const response = await fetchCard(id)
+       let converter = new Showdown.Converter()
+        let text = response.text
+        response.text = parse(converter.makeHtml(text || "").replace(/href/g, "target='_blank' href"));       
+    
         setData(response)
     } catch (error) {
         setError(error)
@@ -33,7 +39,7 @@ const CardDetailsPage = () => {
   <Link to={backLink.current} className={css.backLink}>back</Link>
   <h2 className={css.title}>{data.title}</h2>
   <div className={css.content}>
-    <Slider data={data.photo}/>
+    <Slider data={data.photo} desc={data.imageDescriptions}/>
     <p className={css.text}>{data.text}</p>
   </div>
   </>;
