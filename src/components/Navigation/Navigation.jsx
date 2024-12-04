@@ -11,12 +11,12 @@ import { useState } from "react"
      {isSidebarOpen && <ul className={css.sidebar}>
       <li onClick={()=>{setIsSidebarOpen(false)}}className={css.closeBtn}><NavLink><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></NavLink></li>
         <li>
-          <NavLink to="/">Home</NavLink></li>
+          <NavLink to="/" onClick={()=>{setIsSidebarOpen(false)}}>Home</NavLink></li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" onClick={()=>{setIsSidebarOpen(false)}}>About</NavLink>
           </li>
           <li>
-            <NavLink to="/news">News</NavLink>
+            <NavLink to="/news" onClick={()=>{setIsSidebarOpen(false)}}>News</NavLink>
           </li>
       </ul>}
       <ul>
