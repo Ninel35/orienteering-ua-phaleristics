@@ -12,11 +12,11 @@
 }
 
 @media (min-width: 450px) {
-    .card {
-      width: calc((100% - 26px) / 2);
-      height: 350px;
-    }
+  .card {
+    width: calc((100% - 26px) / 2);
+    height: 350px;
   }
+}
 
 @media (min-width: 800px) {
   .card {
