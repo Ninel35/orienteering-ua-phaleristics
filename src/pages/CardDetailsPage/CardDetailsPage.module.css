@@ -1,47 +1,59 @@
 .backLink{
-   margin: 30px 10px 20px 20px;
-   text-decoration: none;
-   color: rgb(144, 206, 206);
-   cursor: pointer;
-}
-.backLink:hover{
-    color: rgb(41, 41, 241);
-}
-
-.content{
-    /* padding: 50px; */
-    display: flex;
-    flex-direction: column;
+    margin: 30px 10px 20px 20px;
+    text-decoration: none;
+    color: rgb(144, 206, 206);
+    cursor: pointer;
+ }
+ .backLink:hover{
+     color: rgb(41, 41, 241);
  }
  
-
-@media (min-width: 800px){
-    .content{
-        padding: 50px;
-        display: block;
+ .content{
+     display: flex;
+     flex-direction: column;
+  }
+  
+ 
+ @media (min-width: 800px){
+     .content{
+         padding: 50px;
+         padding-top: 0;
+         display: block;
+      }
+     
+ }
+ 
+ .title{
+     color:rgb(40, 17, 244);
+     margin-top: 10px;
+     margin-bottom: 20px;
+     margin-left: 70px;
+     margin-right: 10px;
+     text-align: center;
+     font-size: 12px;
+     font-weight: 300px;
+ }
+ 
+ @media (min-width: 450px){
+     .title{
+         font-size: 20px;
+         font-weight: 300px;
      }
-    
-}
-
-.title{
-    color:aqua;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-.text{
-    text-align: justify;
-    margin: 10px;
-}
-
-@media (min-width: 800px){
-    .text{
-        text-align: justify;
-        margin: 0;
-    }
-    
-}
-
-
-
+ }
+ .text{
+     text-align: justify;
+     margin: 10px;
+   
+ }
+ 
+ @media (min-width: 800px){
+     .text{
+         text-align: justify;
+         margin: 0;
+     }
+     
+ }
+ 
+ 
+ 
+ 
