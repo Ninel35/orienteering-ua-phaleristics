@@ -1,3 +1,31 @@
+.filterBtn{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+   height: 25px;
+background: linear-gradient(180deg, rgba(10, 10, 10, 0.735), transparent);
+border-radius: 10px;
+border-color: aliceblue;
+margin-bottom: 5px;;
+}
+
+@media (min-width: 800px){
+    .filterBtn{
+        display: none;
+    }
+}
+
+.filterMobile{
+    color: blue;
+}
+
+@media (min-width: 800px){
+    .filterMobile{
+        display: none;
+    }
+}
+
+
 .filter {
     display: none;
 }

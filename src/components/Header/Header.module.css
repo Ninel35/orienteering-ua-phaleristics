@@ -1,11 +1,43 @@
 header {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Orienteering.jpg/1200px-Orienteering.jpg");
-  height: 60vh;
+  background: url("./../../assets/Kolaże1.jpg");
   display: flex;
   flex-direction: column-reverse;
+  background-size: contain;
+  background-position-y: 50px;
+  background-repeat: no-repeat;
+  height: 20vh;
 }
-h1 {
-  color: rgb(242, 237, 237);
+h1 {  
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: blue;
+  color: blue;
+  font-size: 20px;
   margin: auto;
   text-align: center;
+  text-shadow: yellow 5px -2px;
+  font-style: italic;
+  padding-top: 45px;
+}
+
+@media (min-width: 800px) {
+  header {
+    background: url("./../../assets/Kolaże1.jpg");
+    height: 60vh;
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: contain;
+    background-position-y: 50px;
+    background-repeat: no-repeat;
+  }
+  h1 {  
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
+    color: blue;
+    font-size: 60px;
+    margin: auto;
+    text-align: center;
+    text-shadow: yellow 10px -5px;
+    font-style: italic;
+    padding-top: 7px;
+  }
 }
