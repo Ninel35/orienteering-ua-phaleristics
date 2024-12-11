@@ -1,5 +1,6 @@
 import { useState } from "react";
 import css from "./Slider.module.css";
+import Magnifier from "react-magnifier";
 
 const Slider = ({data}) => {
   const [photos, setPhotos] = useState(data);
@@ -22,7 +23,8 @@ const Slider = ({data}) => {
       </button>}
       <div className={css.slides}>
         {photos.map((el, idx) => (
-          <img className={css.slide} src={el?.url} key={idx} />
+          // <img className={css.slide} src={el?.url} key={idx} />
+          <Magnifier src={el?.url} key={idx} className={css.slide} zoomFactor={2} mgWidth={300} mgHeight={300}/>
         ))}
       </div>
       { photos.length > 1 &&<button className={css.arrow} onClick={next}>

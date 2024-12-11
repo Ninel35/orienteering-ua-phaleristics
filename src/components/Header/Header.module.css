@@ -18,6 +18,12 @@ h1 {
   font-style: italic;
   padding-top: 45px;
 }
+@media (min-width: 450px){
+header{
+  height: 30vp;
+  background-repeat: repeat;
+}
+}
 
 @media (min-width: 800px) {
   header {
@@ -27,7 +33,7 @@ h1 {
     flex-direction: column-reverse;
     background-size: contain;
     background-position-y: 50px;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
   }
   h1 {  
     -webkit-text-stroke-width: 2px;
