@@ -2,11 +2,11 @@ import { useDispatch } from "react-redux";
 import css from "./Filter.module.css";
 import { setFilterAction } from "../../redux/filterSlice";
 import { useState } from "react";
+import { setSearchAction } from "../../redux/searchSlice";
 
 
 
 const Filter = () => {
-
   const [isAsideOpen, setIsAsideOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -14,6 +14,7 @@ const Filter = () => {
     evt.preventDefault();
     if (evt.target === evt.currentTarget) return;
     setIsAsideOpen(false);
+    dispatch(setSearchAction(""));
     dispatch(setFilterAction(evt.target.dataset.source));
   }
 
@@ -22,7 +23,7 @@ const Filter = () => {
 <button className={css.filterBtn} onClick={()=>setIsAsideOpen(!isAsideOpen)}>filter</button>
    {isAsideOpen && <aside className={css.filterMobile} >
       <ul onClick={selectCategory}>
-        <li data-source=""><b>All Categories</b></li>
+        <li data-source="" className={css.allCategories}>All Categories</li>
         <li data-source="ukrainianSummerChampionship">
           Чемпіонати України літні
         </li>
@@ -68,7 +69,7 @@ const Filter = () => {
     </aside>}
     <aside className={css.filter} >
       <ul onClick={selectCategory}>
-        <li data-source=""><b>All Categories</b></li>
+        <li data-source="" className={css.allCategories}>Всі категоріі</li>
         <li data-source="ukrainianSummerChampionship">
           Чемпіонати України літні
         </li>

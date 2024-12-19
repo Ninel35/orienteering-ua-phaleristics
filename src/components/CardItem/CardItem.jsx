@@ -11,7 +11,7 @@ const CardItem = ({ result, location }) => {
           alt={result.title}
         />
          <p className={css.titleMobile}>{result.title}</p>
-      <Link to={result.id} className={css.readMoreBtn} state={{backLink:location}}>Read more</Link>
+      <Link to={result.id} className={css.readMoreBtn} state={{backLink:location}}>Читати більше</Link>
     </li>
   );
 };

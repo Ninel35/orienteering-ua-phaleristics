@@ -36,7 +36,7 @@ const CardDetailsPage = () => {
   console.log(data);
 
   return data && <>
-  <Link to={backLink.current} className={css.backLink}>back</Link>
+  <Link to={backLink.current} className={css.backLink}>повернутись</Link>
   <h2 className={css.title}>{data.title}</h2>
   <div className={css.content}>
     <Slider data={data.photo} desc={data.imageDescriptions}/>

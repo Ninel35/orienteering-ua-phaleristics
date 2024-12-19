@@ -59,3 +59,10 @@ margin-bottom: 5px;;
         top: 50px;
        }
   }
+  .allCategories{
+    color: darkblue;
+    font-size: large;
+  }
+.filter li:hover, .filter li:focus{
+    color: rgb(255, 0, 0);
+}
