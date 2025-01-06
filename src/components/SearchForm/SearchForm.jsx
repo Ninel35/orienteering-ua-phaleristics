@@ -20,7 +20,7 @@ const SearchForm = () => {
   return (
     <form className={css.searchForm}>
       <FaSearch className={css.icon} />
-      <input placeholder="Пошук..." value={search} onChange={(e)=>handleChange(e.target.value)}/>
+      <input className={css.input} placeholder="Пошук..." value={search} onChange={(e)=>handleChange(e.target.value)}/>
     </form>
   );
 };

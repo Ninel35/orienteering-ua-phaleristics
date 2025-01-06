@@ -7,7 +7,7 @@ const CardList =  ({location}) => {
   const filter = useSelector((state)=> state.filter.filter)
   
  return <ul className={css.listCard}>
-      {news.loading && <div>Завантаження...</div>}
+      {news.loading && <div>Завантаження... </div>}
       {!news.loading && news.error ? <div>Виникла помилка</div> : null}
       {!news.loading && news.newses.length ? news.newses.map((result) => {
         if(filter!==""){

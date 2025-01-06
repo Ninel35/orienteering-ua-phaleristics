@@ -16,6 +16,7 @@ const CardDetailsPage = () => {
 
   const getDetails = useCallback( async (id) => {
     try {
+      setIsLoading(true)
         const response = await fetchCard(id)
        let converter = new Showdown.Converter()
         let text = response.text
@@ -32,17 +33,17 @@ const CardDetailsPage = () => {
   useEffect(() => {
     id && getDetails(id.trim())
   }, [id, getDetails]);
-
-  console.log(data);
-
-  return data && <>
+  
+  return <>{isLoading && <div>Завантаження... </div>}
+      {isLoading && error ? <div>Виникла помилка</div> : null}
+  {data && <>
   <Link to={backLink.current} className={css.backLink}>повернутись</Link>
   <h2 className={css.title}>{data.title}</h2>
   <div className={css.content}>
     <Slider data={data.photo} desc={data.imageDescriptions}/>
     <p className={css.text}>{data.text}</p>
   </div>
-  </>;
+  </>}</>
 };
 
 

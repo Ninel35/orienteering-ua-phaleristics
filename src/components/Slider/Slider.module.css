@@ -2,7 +2,7 @@
   display: none;
 }
 
-.slide img{
+.slide {
   max-height: 300px; 
   max-width: 100%;
 }
