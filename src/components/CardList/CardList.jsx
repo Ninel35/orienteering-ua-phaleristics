@@ -1,24 +1,28 @@
-import CardItem from "../CardItem/CardItem"
-import css from "./CardList.module.css"
-import { useSelector} from  "react-redux"
+import CardItem from "../CardItem/CardItem";
+import css from "./CardList.module.css";
+import { useSelector } from "react-redux";
 
-const CardList =  ({location}) => {
-  const news = useSelector((state) => state.news)
-  const filter = useSelector((state)=> state.filter.filter)
-  
- return <ul className={css.listCard}>
-      {news.loading && <div>Завантаження... </div>}
-      {!news.loading && news.error ? <div>Виникла помилка</div> : null}
-      {!news.loading && news.newses.length ? news.newses.map((result) => {
-        if(filter!==""){
-          if(result.categories.includes(filter)){
-            return <CardItem result={result} key={result.id} location={location}/>
-          }else{
-            return null
-          }
-        }
-        return <CardItem result={result} key={result.id} location={location}/>}) : null}
+const CardList = ({ location }) => {
+  const news = useSelector((state) => state.news);
+  const filter = useSelector((state) => state.filter.filter);
+  const year = useSelector((state) => state.filter.year);
+
+  if (news.loading) return <div>Завантаження... </div>;
+  if (news.error) return <div>Виникла помилка</div>;
+  if (!news.newses.length) return <div>Новин не знайдено </div>;
+
+  const filteredNews = news.newses
+    .filter((result) => (year ? result.year === year : true))
+    .filter((result) => (filter ? result.categories.includes(filter) : true))
+    .sort((a, b) => a.year - b.year);
+
+  return (
+    <ul className={css.listCard}>
+      {filteredNews.map((result) => (
+        <CardItem result={result} key={result.id} location={location} />
+      ))}
     </ul>
-}
+  );
+};
 
-export default CardList
+export default CardList;
