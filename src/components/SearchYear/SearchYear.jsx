@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setYearAction } from "../../redux/filterSlice";
+import css from "./SearchYear.module.css";
 
 const SearchYear = () => {
   const dispatch = useDispatch();

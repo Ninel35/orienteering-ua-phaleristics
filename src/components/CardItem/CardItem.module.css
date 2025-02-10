@@ -15,11 +15,11 @@
 }
 
 @media (min-width: 450px) {
-    .card {
-      width: calc((100% - 26px) / 2);
-      height: 350px;
-    }
+  .card {
+    width: calc((100% - 26px) / 2);
+    height: 350px;
   }
+}
 
 @media (min-width: 800px) {
   .card {
@@ -33,8 +33,7 @@
   margin-top: 10px;
 }
 
-@media (min-width: 450px){
-
+@media (min-width: 450px) {
   .picture {
     margin-top: 0;
   }
@@ -52,28 +51,30 @@
   text-decoration: none;
   font-size: 10px;
 }
-.titleComp{
-  display: none;
 
+.readMoreBtn:hover {
+  background-color: yellow;
+  color: blue;
+}
+.titleComp {
+  display: none;
 }
 
-.card p{
+.card p {
   font-size: 14px;
 }
 
-
-@media (min-width: 450px){
-  .card p{
+@media (min-width: 450px) {
+  .card p {
     font-size: 17px;
   }
 }
 
-@media (min-width: 450px){
-  .titleMobile{
+@media (min-width: 450px) {
+  .titleMobile {
     display: none;
   }
- .titleComp{
+  .titleComp {
     display: block;
-  
   }
 }
