@@ -1,0 +1,31 @@
+.artic {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.h2 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.h3 {
+  margin-bottom: 20px;
+}
+.text {
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+@media (min-width: 800px) {
+  .artic {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+@media (min-width: 800px) {
+  .h2 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
