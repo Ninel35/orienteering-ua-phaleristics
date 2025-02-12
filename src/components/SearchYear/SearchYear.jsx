@@ -11,7 +11,7 @@ const SearchYear = () => {
   };
 
   return (
-    <select onChange={handleChange} defaultValue="">
+    <select className={css.select} onChange={handleChange} defaultValue="">
       <option value="">Роки</option>
       <option value="1962">1962</option>
       <option value="1963">1963</option>

@@ -1,5 +1,6 @@
-.header{
+.header {
   text-align: center;
+  margin-top: 20px;
 }
 
 .article {
@@ -40,7 +41,7 @@
   height: 300px;
 }
 
-.imageDescription{
+.imageDescription {
   text-align: center;
   font-size: 0.5em;
 }
