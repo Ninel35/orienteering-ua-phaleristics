@@ -1,4 +1,4 @@
-header {
+.header {
   background: url("./../../assets/Kolaże1.jpg");
   display: flex;
   flex-direction: column-reverse;
@@ -7,7 +7,7 @@ header {
   background-repeat: no-repeat;
   height: 20vh;
 }
-h1 {  
+h1 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: blue;
   color: blue;
@@ -18,15 +18,15 @@ h1 {
   font-style: italic;
   padding-top: 45px;
 }
-@media (min-width: 450px){
-header{
-  height: 30vp;
-  background-repeat: repeat;
-}
+@media (min-width: 450px) {
+  .header {
+    height: 30vp;
+    background-repeat: repeat;
+  }
 }
 
 @media (min-width: 800px) {
-  header {
+  .header {
     background: url("./../../assets/Kolaże1.jpg");
     height: 60vh;
     display: flex;
@@ -35,7 +35,7 @@ header{
     background-position-y: 50px;
     /* background-repeat: no-repeat; */
   }
-  h1 {  
+  h1 {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: blue;
     color: blue;
