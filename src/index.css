@@ -1,11 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* font-family:  "Gill Sans Extrabold", sans-serif; */
-  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

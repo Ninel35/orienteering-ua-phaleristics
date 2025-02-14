@@ -22,6 +22,11 @@ const SearchYear = () => {
       <option value="1968">1968</option>
       <option value="1969">1969</option>
       <option value="1970">1970</option>
+      <option value="1971">1971</option>
+      <option value="1972">1972</option>
+      <option value="1973">1973</option>
+      <option value="1974">1974</option>
+      <option value="1975">1975</option>
     </select>
   );
 };

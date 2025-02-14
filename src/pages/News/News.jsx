@@ -1,7 +1,4 @@
-
- const News = () => {
-  return (
-    <>News</>
-  )
-}
-export default News
+const News = () => {
+  return <></>;
+};
+export default News;

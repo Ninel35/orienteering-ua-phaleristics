@@ -24,7 +24,9 @@
 }
 
 .right img {
-  height: 300px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .left {
@@ -38,7 +40,9 @@
 }
 
 .left img {
-  height: 300px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .imageDescription {
@@ -65,6 +69,7 @@
 
   .right img {
     height: 300px;
+    width: auto;
   }
 
   .left {
@@ -78,5 +83,10 @@
 
   .left img {
     height: 300px;
+    width: auto;
+  }
+
+  .name {
+    margin-bottom: 20px;
   }
 }

@@ -23,7 +23,7 @@ const Top10 = () => {
         IOF - Міжнародної федерації спортивного орієнтування.
       </h2>
       <figure className={css.left}>
-        <img src={img1} alt="" height="300" />
+        <img src={img1} alt="" />
         <div>
           Першу медаль чемпіонату світу IOF (World Orienteering Championships)
           для України – і одразу золоту! – виборов 1995 року в Німеччині{" "}
@@ -33,23 +33,23 @@ const Top10 = () => {
       <figure className={css.right}>
         <div>
           Перші медалі юніорського чемпіонату світу (Junior World Orienteering
-          Championships) – срібні – здобули для України 1999 року у Болгарії
-          <b>Ірина Купріянова</b>, <b>Вікторія Плохенко</b> та{" "}
-          <b>Наталія Потопальська</b> (в естафеті).
+          Championships) – срібні – здобули для України 1999 року у Болгарії{" "}
+          <b>Ірина Купріянова, Вікторія Плохенко та Наталія Потопальська</b> (в
+          естафеті).
         </div>
-        <img src={img2} alt="" height="400" className={css.right} />
+        <img src={img2} alt="" className={css.right} />
       </figure>
       <figure className={css.left}>
         <div>
-          <img src={img3} alt="" height="300" />
+          <img src={img3} alt="" />
           <figcaption className={css.imageDescription}>
             Фотографії взяті з сайту WorldofO.com
           </figcaption>
         </div>
         <div>
           Перші медалі в естафеті «дорослого» чемпіонату світу – бронзові -
-          здобули для України 2013 року у Фінляндії <b>Павло Ушкварок</b>,
-          <b>Олександр Кратов</b> та <b>Денис Щербаков</b>.
+          здобули для України 2013 року у Фінляндії{" "}
+          <b>Павло Ушкварок, Олександр Кратов та Денис Щербаков</b>.
         </div>
       </figure>
       <figure className={css.right}>
@@ -59,14 +59,11 @@ const Top10 = () => {
           <b>Надія Волинська</b>.
         </div>
         <div>
-          <img src={img4} alt="" height="300" className={css.right} />
-          <figcaption className={css.imageDescription}>
-            Фотографії взяті з сайту WorldofO.com
-          </figcaption>
+          <img src={img4} alt="" className={css.right} />
         </div>
       </figure>
       <h2 className={css.header}>
-        TOП-10 - рейтинг складений на підставі досягнень українських спортсменів
+        TOП-10 українських спортсменів - рейтинг складений на підставі досягнень
         <br />
         на чемпіонатах світу IOF.
       </h2>
@@ -78,7 +75,7 @@ const Top10 = () => {
           </figcaption>
         </div>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Юрій Омельченко, Чернівці /{" "}
             <span lang="en">Yuri Omeltchenko, Chernivtsi</span>
           </h3>
@@ -100,7 +97,7 @@ const Top10 = () => {
       </figure>
       <figure className={css.right}>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Надія Волинська, Львів /{" "}
             <span lang="en">Nadiya Volynska, Lviv</span>
           </h3>
@@ -130,7 +127,7 @@ const Top10 = () => {
           </figcaption>
         </div>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Руслан Глібов, Дніпро / <span lang="en">Ruslan Glibov, Dnipro</span>
           </h3>
           <ul>
@@ -147,7 +144,7 @@ const Top10 = () => {
       </figure>
       <figure className={css.right}>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Олександр Кратов, Феодосія /{" "}
             <span lang="en">Oleksandr Kratov, Feodosia</span>
           </h3>
@@ -174,7 +171,7 @@ const Top10 = () => {
           </figcaption>
         </div>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Павло Ушкварок, Харків /{" "}
             <span lang="en">Pavlo Ushkvarok, Kharkiv</span>
           </h3>
@@ -190,7 +187,7 @@ const Top10 = () => {
       </figure>
       <figure className={css.right}>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Денис Щербаков, Олешки /{" "}
             <span lang="en">Denys Sherbakov, Oleshky</span>
           </h3>
@@ -214,7 +211,7 @@ const Top10 = () => {
           </figcaption>
         </div>
         <div>
-          <h3>
+          <h3 className={css.name}>
             В’ячеслав Мухідінов, Мукачево /{" "}
             <span lang="en">Vyacheslav Mukhidinov, Mukachevo</span>
           </h3>
@@ -230,7 +227,7 @@ const Top10 = () => {
       </figure>
       <figure className={css.right}>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Наталія Потопальська, Калуш /{" "}
             <span lang="en">Nataliya Potopalska, Kalush</span>
           </h3>
@@ -253,7 +250,7 @@ const Top10 = () => {
       <figure className={css.left}>
         <img src={img13} alt="" />
         <div>
-          <h3>
+          <h3 className={css.name}>
             Ірина Купріянова, Мукачево /{" "}
             <span lang="en">Iryna Kupriyanova, Mukachevo</span>
           </h3>
@@ -265,7 +262,7 @@ const Top10 = () => {
       </figure>
       <figure className={css.right}>
         <div>
-          <h3>
+          <h3 className={css.name}>
             Вікторія Плохенко, Херсон /{" "}
             <span lang="en">Viktoria Plokhenko, Kherson</span>
           </h3>
