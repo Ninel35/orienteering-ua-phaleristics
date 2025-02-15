@@ -1,68 +1,73 @@
-.filterBtn{
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-   height: 25px;
-background: linear-gradient(180deg, rgba(10, 10, 10, 0.735), transparent);
-border-radius: 10px;
-border-color: aliceblue;
-margin-bottom: 5px;;
-}
-
-@media (min-width: 800px){
-    .filterBtn{
-        display: none;
-    }
-}
-
-.filterMobile{
-    color: blue;
-}
-
-@media (min-width: 800px){
-    .filterMobile{
-        display: none;
-    }
-}
-
-
-.filter {
-    display: none;
-}
-.filter > ul li {
-    list-style: none;
-    
-   }
-
-.filter > ul li[data-source]{
-    cursor: pointer;
-
-}
-.oblast{
-    color: rgb(14, 80, 233);
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.regions{
-    padding-left: 10px;
+.filterBtn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 25px;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.735), transparent);
+  border-radius: 10px;
+  border-color: aliceblue;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 800px) {
-    .filter {
-        display: block;
-        width: 20%;
-        color: blue;
-        margin-left: 15px;
-        height: 80vh;
-        overflow-y: auto; 
-        position: sticky;
-        top: 50px;
-       }
+  .filterBtn {
+    display: none;
   }
-  .allCategories{
-    color: darkblue;
-    font-size: large;
+}
+
+.filterMobile {
+  color: blue;
+  margin-left: 10px;
+}
+.filterMobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+@media (min-width: 800px) {
+  .filterMobile {
+    display: none;
   }
-.filter li:hover, .filter li:focus{
-    color: rgb(255, 0, 0);
+}
+
+.filter {
+  display: none;
+}
+.filter > ul li {
+  list-style: none;
+}
+
+.filter > ul li[data-source] {
+  cursor: pointer;
+}
+.oblast {
+  color: rgb(14, 80, 233);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.regions {
+  padding-left: 10px;
+}
+
+@media (min-width: 800px) {
+  .filter {
+    display: block;
+    width: 20%;
+    color: blue;
+    margin-left: 15px;
+    height: 80vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 50px;
+  }
+}
+.allCategories {
+  color: darkblue;
+  font-size: large;
+}
+.filter li:hover,
+.filter li:focus {
+  color: rgb(255, 0, 0);
 }

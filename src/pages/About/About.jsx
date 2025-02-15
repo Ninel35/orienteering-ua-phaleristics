@@ -3,6 +3,10 @@ import css from "./About.module.css";
 const About = () => {
   return (
     <article className={css.artic}>
+      <img
+        className={css.counter}
+        src="https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=n&d=_Oc9F3kg19qBNmKgX28mdlmSyRKP3q24f-fNiCZ4qaE"
+      />
       <h2 className={css.h2}>
         Колекція значків, медалей та газетних публікацій зі спортивного
         <br />
