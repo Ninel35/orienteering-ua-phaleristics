@@ -3,11 +3,6 @@ import css from "./About.module.css";
 const About = () => {
   return (
     <article className={css.artic}>
-      <script
-        type="text/javascript"
-        id="mapmyvisitors"
-        src="//mapmyvisitors.com/map.js?d=_Oc9F3kg19qBNmKgX28mdlmSyRKP3q24f-fNiCZ4qaE&cl=ffffff&w=a"
-      ></script>
       <h2 className={css.h2}>
         Колекція значків, медалей та газетних публікацій зі спортивного
         <br />
