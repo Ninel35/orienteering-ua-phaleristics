@@ -71,3 +71,6 @@
 .filter li:focus {
   color: rgb(255, 0, 0);
 }
+.selected {
+  color: red;
+}

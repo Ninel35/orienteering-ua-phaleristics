@@ -12,6 +12,7 @@ import News from "./pages/News/News";
 import CardDetailsPage from "./pages/CardDetailsPage/CardDetailsPage";
 import Top10 from "./pages/Top10/Top10";
 import About from "./pages/About/About";
+import Top10Veterans from "./pages/Top10Veterans/Top10Veterans";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="top10" element={<Top10 />} />
       <Route path="news" element={<News />} />
       <Route path="about" element={<About />} />
+      <Route path="masters" element={<Top10Veterans />} />
       <Route path=":id" element={<CardDetailsPage />} />
     </Route>
   )

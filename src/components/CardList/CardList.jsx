@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import CardItem from "../CardItem/CardItem";
 import css from "./CardList.module.css";
 import { useSelector } from "react-redux";
@@ -6,6 +7,13 @@ const CardList = ({ location }) => {
   const news = useSelector((state) => state.news);
   const filter = useSelector((state) => state.filter.filter);
   const year = useSelector((state) => state.filter.year);
+
+  useEffect(() => {
+    const scrollPosition = sessionStorage.getItem("scrollPosition");
+    if (scrollPosition) {
+      window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+  }, []);
 
   if (news.loading) return <div>Завантаження... </div>;
   if (news.error) return <div>Виникла помилка</div>;

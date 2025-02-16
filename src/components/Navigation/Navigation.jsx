@@ -39,16 +39,6 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
-              to="/top10"
-              onClick={() => {
-                setIsSidebarOpen(false);
-              }}
-            >
-              Топ 10 спортсменів України
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/news"
               onClick={() => {
                 setIsSidebarOpen(false);
@@ -67,6 +57,26 @@ const Navigation = () => {
               Про сторінку
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/top10"
+              onClick={() => {
+                setIsSidebarOpen(false);
+              }}
+            >
+              Топ 10 спортсменів України
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/masters"
+              onClick={() => {
+                setIsSidebarOpen(false);
+              }}
+            >
+              Топ ветеранів
+            </NavLink>
+          </li>
         </ul>
       )}
       <ul>
@@ -74,14 +84,18 @@ const Navigation = () => {
           <NavLink to="/">Головна сторінка</NavLink>
         </li>
         <li className={css.mobileOn}>
-          <NavLink to="/top10">Топ 10 спортсменів України</NavLink>
-        </li>
-        <li className={css.mobileOn}>
           <NavLink to="/news">Новини</NavLink>
         </li>
         <li className={css.mobileOn}>
           <NavLink to="/about">Про сторінку</NavLink>
         </li>
+        <li className={css.mobileOn}>
+          <NavLink to="/top10">Топ 10 спортсменів України</NavLink>
+        </li>
+        <li className={css.mobileOn}>
+          <NavLink to="/masters">Топ ветеранів</NavLink>
+        </li>
+
         <li
           onClick={() => {
             setIsSidebarOpen(true);

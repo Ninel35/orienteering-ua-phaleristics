@@ -220,8 +220,9 @@ const Top10 = () => {
             <li>шосте місце на чемпіонаті світу 2003, Швейцарія (relay).</li>
           </ul>
           <p>
-            Клуби: КСО «Товариш» Мукачево UKR; Farum-Tisvilde OK DEN, Turun
-            Metsänkävijät FIN, Kristiansand OK NOR, Varegg OK NOR.
+            Клуби: КСО «Товариш» Мукачево UKR, Klub OB Dargov Košice SVK
+            NYVSC-Nyírerdő HUN, Nyíregyházi Vasutas SC NUN, Farum-Tisvilde OK
+            DEN, Turun Metsänkävijät FIN, Kristiansand OK NOR, Varegg OK NOR.
           </p>
         </div>
       </figure>
@@ -238,7 +239,7 @@ const Top10 = () => {
               (long).
             </li>
           </ul>
-          <p>Клуби: «Азимут» Калуш;</p>
+          <p>Клуби: «Азимут» Калуш, Nyíregyházi Vasutas SC NUN</p>
         </div>
         <div>
           <img src={img12} alt="" />
@@ -257,7 +258,10 @@ const Top10 = () => {
           <ul>
             <li>1999 – віце-чемпіонка світу серед юніорів, Болгарія.</li>
           </ul>
-          <p>Клуби: КСО «Товариш» Мукачево UKR; Farum-Tisvilde OK DEN.</p>
+          <p>
+            Клуби: КСО «Товариш» Мукачево UKR, Klub OB Kysak SVK, Farum-Tisvilde
+            OK DEN.
+          </p>
         </div>
       </figure>
       <figure className={css.right}>
