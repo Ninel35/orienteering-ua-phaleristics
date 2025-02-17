@@ -73,7 +73,8 @@ const About = () => {
         матеріали, просимо надіслати їх фото на нашу адресу:{" "}
         <a href="mailto:oleksandr@orienteering-history.com">
           oleksandr@orienteering-history.com
-        </a>
+        </a>{" "}
+        (Олександр Цепурдей)
       </p>
     </article>
   );

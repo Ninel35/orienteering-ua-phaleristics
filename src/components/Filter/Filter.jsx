@@ -62,13 +62,13 @@ const Filter = () => {
         className={css.filterBtn}
         onClick={() => setIsAsideOpen(!isAsideOpen)}
       >
-        filter
+        категоріі
       </button>
       {isAsideOpen && (
         <aside className={css.filterMobile}>
           <ul onClick={selectCategory}>
             <li data-source="" className={css.allCategories}>
-              All Categories
+              Всі категоріі
             </li>
             {categories.map(({ id, label }) => (
               <li
