@@ -1,0 +1,60 @@
+.backLink{
+    margin: 30px 10px 20px 20px;
+    text-decoration: none;
+    color: rgb(144, 206, 206);
+    cursor: pointer;
+ }
+ .backLink:hover{
+     color: rgb(41, 41, 241);
+ }
+ 
+ .content{
+     display: flex;
+     flex-direction: column;
+     line-height: 1.5;
+  }
+  
+ 
+ @media (min-width: 800px){
+     .content{
+         padding: 50px;
+         padding-top: 0;
+         display:inline-block;
+      }
+     
+ }
+ 
+ .title{
+     color:rgb(40, 17, 244);
+     margin-top: 10px;
+     margin-bottom: 20px;
+     margin-left: 70px;
+     margin-right: 10px;
+     text-align: center;
+     font-size: 12px;
+     font-weight: 300px;
+ }
+ 
+ @media (min-width: 450px){
+     .title{
+         font-size: 20px;
+         font-weight: 300px;
+     }
+ }
+ .text{
+     text-align: justify;
+     margin: 10px;
+   
+ }
+ 
+ @media (min-width: 800px){
+     .text{
+         text-align: justify;
+         margin: 0;
+     }
+     
+ }
+ 
+ 
+ 
+ 
