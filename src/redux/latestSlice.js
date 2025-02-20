@@ -8,7 +8,7 @@ const initialState = {
 
 export const fetchLatestNewses = createAsyncThunk(
   "latest/fetchAllNews",
-  async ({ rejectWithValue }) => {
+  async (_, { rejectWithValue }) => {
     try {
       const response = await fetch("/.netlify/functions/fetchLatestNewses", {
         method: "POST",
