@@ -14,7 +14,7 @@ const NewsList = ({ location }) => {
     // if (scrollPosition) {
     //   window.scrollTo(0, parseInt(scrollPosition, 10));
     // }
-  }, []);
+  }, [dispatch]);
 
   if (news.loading) return <div>Завантаження... </div>;
   if (news.error) return <div>Виникла помилка</div>;
