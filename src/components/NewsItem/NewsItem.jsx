@@ -8,11 +8,11 @@ const NewsItem = ({ result, location }) => {
   return (
     <li className={css.card}>
       <p className={css.titleComp}>{result.title}</p>
-      <img
+      {/* <img
         className={css.picture}
         src={result?.photo[0]?.url}
         alt={result.title}
-      />
+      /> */}
       <p className={css.titleMobile}>{result.title}</p>
       <Link
         to={result.id}
