@@ -5,7 +5,7 @@ const News = () => {
   return (
     <>
       <NewsList />
-      {/* <Outlet /> */}
+      <Outlet />
     </>
   );
 };

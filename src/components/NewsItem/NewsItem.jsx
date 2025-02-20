@@ -10,7 +10,7 @@ const NewsItem = ({ result, location }) => {
       <p className={css.titleComp}>{result.title}</p>
       <img
         className={css.picture}
-        src={result.photo[0]?.url}
+        src={result?.photo[0]?.url}
         alt={result.title}
       />
       <p className={css.titleMobile}>{result.title}</p>
