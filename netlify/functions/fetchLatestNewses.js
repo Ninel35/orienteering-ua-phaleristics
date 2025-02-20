@@ -1,6 +1,5 @@
 export async function handler(event) {
   const HYGRAPH_ENDPOINT = process.env.HYGRAPH_API_URL;
-  const { id } = JSON.parse(event.body || "{}");
 
   if (!HYGRAPH_ENDPOINT) {
     return {
@@ -31,7 +30,7 @@ export async function handler(event) {
     if (response.ok) {
       return {
         statusCode: 200,
-        body: JSON.stringify(data.data.news),
+        body: JSON.stringify(data.data.latestNewses),
       };
     } else {
       throw new Error(data.errors || "An error occurred");
