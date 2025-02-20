@@ -5,7 +5,11 @@ import { useEffect } from "react";
 import { fetchLatestNewses } from "../../redux/latestSlice";
 
 const NewsList = ({ location }) => {
-  const news = useSelector((state) => state.latestNews);
+  const {
+    newses = [],
+    loading,
+    error,
+  } = useSelector((state) => state.latestNews);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,13 +20,13 @@ const NewsList = ({ location }) => {
     // }
   }, [dispatch]);
 
-  if (news.loading) return <div>Завантаження... </div>;
-  if (news.error) return <div>Виникла помилка</div>;
-  if (!news.newses.length) return <div>Новин не знайдено </div>;
+  if (loading) return <div>Завантаження... </div>;
+  if (error) return <div>Виникла помилка</div>;
+  if (!newses.length) return <div>Новин не знайдено </div>;
 
   return (
     <ul className={css.listCard}>
-      {news.newses.map((result) => (
+      {newses.map((result) => (
         <NewsItem result={result} key={result.id} location={location} />
       ))}
     </ul>
