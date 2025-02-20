@@ -18,7 +18,7 @@ const NewsList = ({ location }) => {
 
   return (
     <ul className={css.listCard}>
-      {news.map((result) => (
+      {news.newses.map((result) => (
         <NewsItem result={result} key={result.id} location={location} />
       ))}
     </ul>
