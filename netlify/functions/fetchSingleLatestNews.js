@@ -27,7 +27,6 @@ export async function handler(event) {
               photo {
                 url
               }
-              
             }
           }`,
         variables: {
@@ -41,7 +40,7 @@ export async function handler(event) {
     if (response.ok) {
       return {
         statusCode: 200,
-        body: JSON.stringify(data.data.news),
+        body: JSON.stringify(data.data.latestNews),
       };
     } else {
       throw new Error(data.errors || "An error occurred");
