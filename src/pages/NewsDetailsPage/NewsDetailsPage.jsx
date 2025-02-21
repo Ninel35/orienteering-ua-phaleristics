@@ -50,7 +50,7 @@ const NewsDetailsPage = () => {
   return (
     <>
       {isLoading && <div>Завантаження... </div>}
-      {isLoading && error ? <div>Виникла помилка</div> : null}
+      {error && <div>Виникла помилка</div>}
       {data && (
         <>
           <Link to={backLink.current} className={css.backLink}>
@@ -58,8 +58,8 @@ const NewsDetailsPage = () => {
           </Link>
           <h2 className={css.title}>{data.title}</h2>
           <div className={css.content}>
-            <Slider data={data.photo} desc={data.imageDescriptions} />
-            <p className={css.text}>{text}</p>
+            <Slider data={data.photo} />
+            <p className={css.text}>{data.text}</p>
           </div>
         </>
       )}
