@@ -19,7 +19,11 @@ export async function handler(event) {
         query: `query {
             latestNewses {
               id
-              title           
+              title
+              text
+              photo {
+                url
+              }
             }
           }`,
       }),

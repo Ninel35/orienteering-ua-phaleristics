@@ -21,9 +21,7 @@ export async function handler(event) {
             latestNews(where: { id: $id }) {
               id
               title
-              text {
-                html
-              }
+              text 
               photo {
                 url
               }

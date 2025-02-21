@@ -11,7 +11,7 @@ const NewsDetailsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const backLink = useRef(location.state?.backLink ?? "/");
+  const backLink = useRef(location.state?.backLink ?? "/news");
 
   const getDetails = useCallback(async (id) => {
     try {
@@ -30,7 +30,7 @@ const NewsDetailsPage = () => {
 
       const postData = await response.json();
       let converter = new Showdown.Converter();
-      let text = postData.text;
+      let text = postData.text.text;
       postData.text = parse(
         converter.makeHtml(text || "").replace(/href/g, "target='_blank' href")
       );
@@ -59,7 +59,7 @@ const NewsDetailsPage = () => {
           <h2 className={css.title}>{data.title}</h2>
           <div className={css.content}>
             <Slider data={data.photo} desc={data.imageDescriptions} />
-            <p className={css.text}>{data.text}</p>
+            <p className={css.text}>{text}</p>
           </div>
         </>
       )}
