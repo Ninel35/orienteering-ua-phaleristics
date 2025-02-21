@@ -16,7 +16,7 @@ const NewsItem = ({ result, location }) => {
         >
           <h2 className={css.titleComp}>{result.title}</h2>
         </Link>
-        <p className={css.intro}>{result.text.text.slice(0, 300) + "..."}</p>
+        <p className={css.intro}>{result.text.slice(0, 300) + "..."}</p>
       </div>
       <img
         className={css.picture}

@@ -30,7 +30,7 @@ const NewsDetailsPage = () => {
 
       const postData = await response.json();
       let converter = new Showdown.Converter();
-      let text = postData.text.text;
+      let text = postData.text;
       postData.text = parse(
         converter.makeHtml(text || "").replace(/href/g, "target='_blank' href")
       );
