@@ -16,13 +16,16 @@ const NewsDetailsPage = () => {
   const getDetails = useCallback(async (id) => {
     try {
       setIsLoading(true);
-      const response = await fetch("/.netlify/functions/fetchSinglePost", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id }),
-      });
+      const response = await fetch(
+        "/.netlify/functions/fetchSingleLatestPost",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to fetch post details");
@@ -44,6 +47,7 @@ const NewsDetailsPage = () => {
   }, []);
 
   useEffect(() => {
+    console.log(newsId);
     newsId && getDetails(newsId.trim());
   }, [newsId, getDetails]);
 
