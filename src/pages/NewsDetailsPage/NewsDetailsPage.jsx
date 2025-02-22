@@ -17,7 +17,7 @@ const NewsDetailsPage = () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "/.netlify/functions/fetchSingleLatestPost",
+        "/.netlify/functions/fetchSingleLatestNews",
         {
           method: "POST",
           headers: {
@@ -47,7 +47,6 @@ const NewsDetailsPage = () => {
   }, []);
 
   useEffect(() => {
-    console.log(newsId);
     newsId && getDetails(newsId.trim());
   }, [newsId, getDetails]);
 
