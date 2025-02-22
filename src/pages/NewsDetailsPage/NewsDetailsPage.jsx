@@ -6,7 +6,7 @@ import Showdown from "showdown";
 import parse from "html-react-parser";
 
 const NewsDetailsPage = () => {
-  const { id } = useParams();
+  const { newsId } = useParams();
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -38,15 +38,14 @@ const NewsDetailsPage = () => {
       setData(postData);
     } catch (error) {
       setError(error);
-      console.log(error);
     } finally {
       setIsLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    id && getDetails(id.trim());
-  }, [id, getDetails]);
+    newsId && getDetails(newsId.trim());
+  }, [newsId, getDetails]);
 
   return (
     <>
