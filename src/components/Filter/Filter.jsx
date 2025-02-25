@@ -12,6 +12,7 @@ const categories = [
   { id: "touristCompetition", label: "Туристичні змагання" },
   { id: "otherCompetition", label: "Інші змагання" },
   { id: "teamClub", label: "Команда / Клуб" },
+  { id: "isf", label: "ISF World School Champs" },
 ];
 
 const regions = [
