@@ -3,6 +3,7 @@ import css from "./Filter.module.css";
 import { setFilterAction } from "../../redux/filterSlice";
 import { useState } from "react";
 import { setSearchAction } from "../../redux/searchSlice";
+import {useParams, useNavigate} from "react-router-dom";
 
 const categories = [
   { id: "ukrainianSummerChampionship", label: "Чемпіонати України літні" },
@@ -45,16 +46,19 @@ const regions = [
 
 const Filter = () => {
   const [isAsideOpen, setIsAsideOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const {categoryId} = useParams();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   function selectCategory(evt) {
     evt.preventDefault();
     if (evt.target === evt.currentTarget) return;
-    setSelectedCategory(evt.target.dataset.source);
+    const selected = evt.target.dataset.source;
+
+    navigate(selected ? `/category/${selected}`:"/")
     setIsAsideOpen(false);
     dispatch(setSearchAction(""));
-    dispatch(setFilterAction(evt.target.dataset.source));
+    dispatch(setFilterAction(selected));
   }
 
   return (
@@ -75,7 +79,7 @@ const Filter = () => {
               <li
                 key={id}
                 data-source={id}
-                className={`${selectedCategory === id ? css.selected : ""}`}
+                className={`${categoryId === id ? css.selected : ""}`}
               >
                 {label}
               </li>
@@ -88,7 +92,7 @@ const Filter = () => {
               <li
                 key={id}
                 data-source={id}
-                className={`${selectedCategory === id ? css.selected : ""}`}
+                className={`${categoryId === id ? css.selected : ""}`}
               >
                 {label}
               </li>
@@ -105,7 +109,7 @@ const Filter = () => {
             <li
               key={id}
               data-source={id}
-              className={`${selectedCategory === id ? css.selected : ""}`}
+              className={`${categoryId === id ? css.selected : ""}`}
             >
               {label}
             </li>
@@ -118,7 +122,7 @@ const Filter = () => {
             <li
               key={id}
               data-source={id}
-              className={`${selectedCategory === id ? css.selected : ""}`}
+              className={`${categoryId === id ? css.selected : ""}`}
             >
               {label}
             </li>

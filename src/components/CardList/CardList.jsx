@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import CardItem from "../CardItem/CardItem";
 import css from "./CardList.module.css";
 import { useSelector } from "react-redux";
+import {useParams} from "react-router-dom"
 
 const CardList = ({ location }) => {
   const news = useSelector((state) => state.news);
   const filter = useSelector((state) => state.filter.filter);
   const year = useSelector((state) => state.filter.year);
+  const {categoryId} = useParams();
 
   useEffect(() => {
     const scrollPosition = sessionStorage.getItem("scrollPosition");
@@ -21,7 +23,7 @@ const CardList = ({ location }) => {
 
   const filteredNews = news.newses
     .filter((result) => (year ? result.year === year : true))
-    .filter((result) => (filter ? result.categories.includes(filter) : true))
+    .filter((result) => (categoryId ? result.categories.includes(categoryId) : true))
     .sort((a, b) => a.year - b.year);
 
   return (
