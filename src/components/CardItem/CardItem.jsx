@@ -15,7 +15,7 @@ const CardItem = ({ result, location }) => {
       />
       <p className={css.titleMobile}>{result.title}</p>
       <Link
-        to={result.id}
+        to={`/${result.id}`}
         className={css.readMoreBtn}
         state={{ backLink: location }}
         onClick={handleClick}
