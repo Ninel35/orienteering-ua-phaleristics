@@ -27,21 +27,21 @@ const SearchYear = () => {
       <option value="1973">1973</option>
       <option value="1974">1974</option>
       <option value="1975">1975</option>
-      <option value="1975">1976</option>
-      <option value="1975">1977</option>
-      <option value="1975">1978</option>
-      <option value="1975">1979</option>
-      <option value="1975">1980</option>
-      <option value="1975">1981</option>
-      <option value="1975">1982</option>
-      <option value="1975">1983</option>
-      <option value="1975">1984</option>
-      <option value="1975">1985</option>
-      <option value="1975">1986</option>
-      <option value="1975">1987</option>
-      <option value="1975">1988</option>
-      <option value="1975">1989</option>
-      <option value="1975">1990</option>
+      <option value="1976">1976</option>
+      <option value="1977">1977</option>
+      <option value="1978">1978</option>
+      <option value="1979">1979</option>
+      <option value="1980">1980</option>
+      <option value="1981">1981</option>
+      <option value="1982">1982</option>
+      <option value="1983">1983</option>
+      <option value="1984">1984</option>
+      <option value="1985">1985</option>
+      <option value="1986">1986</option>
+      <option value="1987">1987</option>
+      <option value="1988">1988</option>
+      <option value="1989">1989</option>
+      <option value="1990">1990</option>
 
     </select>
   );
