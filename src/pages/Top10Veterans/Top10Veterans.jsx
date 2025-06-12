@@ -14,7 +14,7 @@ import img13 from "./images/13.jpg";
 import img14 from "./images/14.jpg";
 import img15 from "./images/15.jpg";
 import img16 from "./images/16.jpg";
-
+import img17 from "./images/17.jpg";
 import css from "./Top10Veterans.module.css";
 
 const Top10Veterans = () => {
@@ -81,7 +81,7 @@ const Top10Veterans = () => {
           1986
           <ul>
             <li>
-              дворазовий чемпіон світу серед ветеранів: 2023, Словаччина (sprint
+              триразовий чемпіон світу серед ветеранів: 2022, Італія (middle M35); 2023, Словаччина (sprint
               + long M35);
             </li>
             <li>
@@ -129,7 +129,7 @@ const Top10Veterans = () => {
               (sprint + long M35);
             </li>
             <li>
-              бронзовий призер чемпіонату світу 2021, Угорщина (middle M35).
+              двічі бронзовий призер чемпіонату світу 2021, Угорщина (middle M35); 2022, Італія (long M35).
             </li>
           </ul>
         </div>
@@ -203,7 +203,22 @@ const Top10Veterans = () => {
         </div>
         <img src={img10} alt="" />
       </figure>
-      <figure className={css.left}>
+       <figure className={css.left}>
+        <img src={img17} alt="" />
+        <div>
+          <h3 className={css.name}>
+            Іван Тумак, Чернівці /{" "}
+            <span lang="en">Ivan Tumak, Chernivtsi</span>
+          </h3>
+          1957
+          <ul>
+            <li>
+             віце-чемпіон світу серед ветеранів 2022, Італія (long M65).
+            </li>
+          </ul>
+        </div>
+      </figure>
+      <figure className={css.right}>
         <img src={img11} alt="" />
         <div>
           <h3 className={css.name}>
@@ -219,7 +234,7 @@ const Top10Veterans = () => {
           </ul>
         </div>
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
         <div>
           <h3 className={css.name}>
             Олександр Чобан, Чернівці /{" "}
@@ -228,14 +243,14 @@ const Top10Veterans = () => {
           1987
           <ul>
             <li>
-              бронзовий призер чемпіонату світу серед ветеранів 2023, Словаччина
+              двічі бронзовий призер чемпіонату світу серед ветеранів 2022, Італія (middle M35); 2023, Словаччина
               (sprint M35).
             </li>
           </ul>
         </div>
         <img src={img12} alt="" />
       </figure>
-      <figure className={css.left}>
+      <figure className={css.right}>
         <img src={img13} alt="" />
         <div>
           <h3 className={css.name}>
@@ -250,7 +265,7 @@ const Top10Veterans = () => {
           </ul>
         </div>
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
         <div>
           <h3 className={css.name}>
             Геннадій Корчевський, Харків /{" "}
@@ -265,7 +280,7 @@ const Top10Veterans = () => {
         </div>
         <img src={img14} alt="" />
       </figure>
-      <figure className={css.left}>
+      <figure className={css.right}>
         <img src={img15} alt="" />
         <div>
           <h3 className={css.name}>
