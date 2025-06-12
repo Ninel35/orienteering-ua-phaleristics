@@ -219,7 +219,7 @@ const Top10Veterans = () => {
         </div>
       </figure>
       <figure className={css.right}>
-        <img src={img11} alt="" />
+        
         <div>
           <h3 className={css.name}>
             Владислав Ласкаржевський, Дніпро /{" "}
@@ -233,8 +233,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+        <img src={img11} alt="" />
       </figure>
       <figure className={css.left}>
+        <img src={img12} alt="" />
         <div>
           <h3 className={css.name}>
             Олександр Чобан, Чернівці /{" "}
@@ -248,10 +250,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img12} alt="" />
+        
       </figure>
       <figure className={css.right}>
-        <img src={img13} alt="" />
+        
         <div>
           <h3 className={css.name}>
             Еллаїда Степаненко, Київ /{" "}
@@ -264,8 +266,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+        <img src={img13} alt="" />
       </figure>
       <figure className={css.left}>
+        <img src={img14} alt="" />
         <div>
           <h3 className={css.name}>
             Геннадій Корчевський, Харків /{" "}
@@ -278,10 +282,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img14} alt="" />
+        
       </figure>
       <figure className={css.right}>
-        <img src={img15} alt="" />
+       
         <div>
           <h3 className={css.name}>
             Наталія Шарапова, Харків /{" "}
@@ -295,6 +299,7 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+         <img src={img15} alt="" />
       </figure>
       <img src={img16} alt="" className={css.group} />
     </article>
