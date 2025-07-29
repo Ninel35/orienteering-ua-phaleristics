@@ -11,7 +11,7 @@ const categories = [
   { id: "dstIVidomstva", label: "Українські чемпіонати ДСТ та відомств" },
   { id: "internationalCompetition", label: "Міжнародні змагання" },
   { id: "touristCompetition", label: "Туристичні змагання" },
-  { id: "otherCompetition", label: "Інші змагання" },
+  { id: "otherCompetition", label: "Інші види орієнтування" },
   { id: "teamClub", label: "Команда / Клуб" },
   { id: "isf", label: "ISF World School Champs" },
 ];
