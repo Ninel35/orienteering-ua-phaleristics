@@ -178,8 +178,8 @@ const Top10Veterans = () => {
         </div>
         <img src={img6} alt="" />
       </figure>
-
-      <figure className={css.right}>
+      <figure className={css.left}>
+        <img src={img8} alt="" />
         <div>
           <h3 className={css.name}>
             Тетяна Божко, Черкаси /{" "}
@@ -190,10 +190,8 @@ const Top10Veterans = () => {
             <li>володарка ветеранського Кубку світу 1997, США (W40).</li>
           </ul>
         </div>
-        <img src={img8} alt="" />
       </figure>
-      <figure className={css.left}>
-        <img src={img9} alt="" />
+      <figure className={css.right}>
         <div>
           <h3 className={css.name}>
             Юрій Омельченко, Чернівці /{" "}
@@ -207,8 +205,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+        <img src={img9} alt="" />
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
+        <img src={img10} alt="" />
         <div>
           <h3 className={css.name}>
             Марія Семак, Мукачево /{" "}
@@ -222,10 +222,8 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img10} alt="" />
       </figure>
-      <figure className={css.left}>
-        <img src={img17} alt="" />
+      <figure className={css.right}>
         <div>
           <h3 className={css.name}>
             Іван Тумак, Чернівці /{" "}
@@ -238,8 +236,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+                <img src={img17} alt="" />
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
+                <img src={img20} alt="" />
         <div>
           <h3 className={css.name}>
             Олена Капара, Херсон /{" "}
@@ -252,10 +252,8 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img20} alt="" />
       </figure>
-      <figure className={css.left}>
-        <img src={img18} alt="" />
+      <figure className={css.right}>
         <div>
           <h3 className={css.name}>
             Олександр Чобан, Чернівці /{" "}
@@ -269,8 +267,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
+                <img src={img18} alt="" />
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
+                <img src={img11} alt="" />
         <div>
           <h3 className={css.name}>
             Владислав Ласкаржевський, Дніпро /{" "}
@@ -284,7 +284,6 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img11} alt="" />
       </figure>
       <figure className={css.right}>
         <div>
