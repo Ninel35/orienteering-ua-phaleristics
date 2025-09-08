@@ -15,6 +15,10 @@ import img14 from "./images/14.jpg";
 import img15 from "./images/15.jpg";
 import img16 from "./images/16.jpg";
 import img17 from "./images/17.jpg";
+import img18 from "./images/18.jpg";
+import img19 from "./images/19.jpg";
+import img20 from "./images/20.jpg";
+
 import css from "./Top10Veterans.module.css";
 
 const Top10Veterans = () => {
@@ -44,11 +48,34 @@ const Top10Veterans = () => {
         <img src={img2} alt="" className={css.right} />
       </figure>
       <h2 className={css.header}>
-        TOP-14 українських майстрів-орієнтувальників, складений на підставі
-        досягнень на ветеранських чемпіонатах світу IOF.
+        TOP-16 українських майстрів-орієнтувальників, складений на підставі
+        досягнень на ветеранських чемпіонатах світу IOF:
       </h2>
       <figure className={css.left}>
-        <img src={img3} alt="" />
+        <img src={img7} alt="" />
+        <div>
+          <h3 className={css.name}>
+            Олена Рудакова, Дніпро /{" "}
+            <span lang="en">Olena Rudakova, Dnipro</span>
+          </h3>
+          1960
+          <ul>
+            <li>
+              триразова чемпіонка світу серед ветеранів 2021, Угорщина (middle W60), 2025, Іспанія
+              (middle + long W65);
+            </li>
+            <li>
+              двічі віце-чемпіонка світу серед ветеранів 2023, Словаччина (middle
+              W60), 2025, Іспанія (sprint W65).
+            </li>
+            <li>
+              бронзова призерка чемпіонату світу серед ветеранів 2021, Угорщина
+              (long W60).
+            </li>
+          </ul>
+        </div>
+      </figure>
+      <figure className={css.right}>
         <div>
           <h3 className={css.name}>
             Микола Божко, Черкаси /{" "}
@@ -65,14 +92,16 @@ const Top10Veterans = () => {
               (М55); 2015, Швеція (sprint M65); 2018, Данія (long M65);
             </li>
             <li>
-              триразовий бронзовий призер чемпіонатів світу серед ветеранів:
+              чотириразовий бронзовий призер чемпіонатів світу серед ветеранів:
               2011, Угорщина (long М60); 2021, Угорщина (sprint M70); 2023,
-              Словаччина (long M70).
+              Словаччина (long M70), 2025, Іспанія (sprint М75).
             </li>
           </ul>
         </div>
+        <img src={img3} alt="" />
       </figure>
-      <figure className={css.right}>
+      <figure className={css.left}>
+        <img src={img4} alt="" />
         <div>
           <h3 className={css.name}>
             Олександр Марчук, Вінниця /{" "}
@@ -89,7 +118,21 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        <img src={img4} alt="" />
+      </figure>
+      <figure className={css.right}>
+        <div>
+          <h3 className={css.name}>
+            Надія Волинська, Львів /{" "}
+            <span lang="en">Nadiya Volynska, Lviv</span>
+          </h3>
+          1984
+          <ul>
+            <li>
+              дворазова чемпіонка світу серед ветеранів: 2025, Іспанія (sprint + middle W40).
+            </li>
+          </ul>
+        </div>
+        <img src={img19} alt="" />
       </figure>
       <figure className={css.left}>
         <img src={img5} alt="" />
@@ -135,29 +178,7 @@ const Top10Veterans = () => {
         </div>
         <img src={img6} alt="" />
       </figure>
-      <figure className={css.left}>
-        <img src={img7} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олена Рудакова, Дніпро /{" "}
-            <span lang="en">Olena Rudakova, Dnipro</span>
-          </h3>
-          1960
-          <ul>
-            <li>
-              чемпіонка світу серед ветеранів 2021, Угорщина (middle W60);;
-            </li>
-            <li>
-              віце-чемпіонка світу серед ветеранів 2023, Словаччина (middle
-              W60);
-            </li>
-            <li>
-              бронзова призерка чемпіонату світу серед ветеранів 2021, Угорщина
-              (long W60).
-            </li>
-          </ul>
-        </div>
-      </figure>
+
       <figure className={css.right}>
         <div>
           <h3 className={css.name}>
@@ -203,7 +224,7 @@ const Top10Veterans = () => {
         </div>
         <img src={img10} alt="" />
       </figure>
-       <figure className={css.left}>
+      <figure className={css.left}>
         <img src={img17} alt="" />
         <div>
           <h3 className={css.name}>
@@ -213,13 +234,43 @@ const Top10Veterans = () => {
           1957
           <ul>
             <li>
-             віце-чемпіон світу серед ветеранів 2022, Італія (long M65)
+              віце-чемпіон світу серед ветеранів 2022, Італія (long M65)
             </li>
           </ul>
         </div>
       </figure>
       <figure className={css.right}>
-        
+        <div>
+          <h3 className={css.name}>
+            Олена Капара, Херсон /{" "}
+            <span lang="en">Olena Kapara, Kherson</span>
+          </h3>
+          1970
+          <ul>
+            <li>
+              Віце-чемпіонка світу 2025, Іспанія (long W55).
+            </li>
+          </ul>
+        </div>
+        <img src={img20} alt="" />
+      </figure>
+      <figure className={css.left}>
+        <img src={img18} alt="" />
+        <div>
+          <h3 className={css.name}>
+            Олександр Чобан, Чернівці /{" "}
+            <span lang="en">Oleksandr Choban, Chernivtsi</span>
+          </h3>
+          1987
+          <ul>
+            <li>
+              триразовий бронзовий призер чемпіонатів світу серед ветеранів 2022, Італія (middle M35); 2023, Словаччина
+              (sprint M35), 2025, Іспанія (middle M35).
+            </li>
+          </ul>
+        </div>
+      </figure>
+      <figure className={css.right}>
         <div>
           <h3 className={css.name}>
             Владислав Ласкаржевський, Дніпро /{" "}
@@ -235,25 +286,7 @@ const Top10Veterans = () => {
         </div>
         <img src={img11} alt="" />
       </figure>
-      <figure className={css.left}>
-        <img src={img12} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олександр Чобан, Чернівці /{" "}
-            <span lang="en">Oleksandr Choban, Chernivtsi</span>
-          </h3>
-          1987
-          <ul>
-            <li>
-              двічі бронзовий призер чемпіонатів світу серед ветеранів 2022, Італія (middle M35); 2023, Словаччина
-              (sprint M35).
-            </li>
-          </ul>
-        </div>
-        
-      </figure>
       <figure className={css.right}>
-        
         <div>
           <h3 className={css.name}>
             Еллаїда Степаненко, Київ /{" "}
@@ -282,10 +315,10 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-        
+
       </figure>
       <figure className={css.right}>
-       
+
         <div>
           <h3 className={css.name}>
             Наталія Шарапова, Харків /{" "}
@@ -299,7 +332,7 @@ const Top10Veterans = () => {
             </li>
           </ul>
         </div>
-         <img src={img15} alt="" />
+        <img src={img15} alt="" />
       </figure>
       <img src={img16} alt="" className={css.group} />
     </article>
