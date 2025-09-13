@@ -20,7 +20,7 @@ const Top10 = () => {
     <article className={css.article}>
       <h2 className={css.header}>
         Перші досягнення українських спортсменів на чемпіонатах світу <br />
-        IOF - Міжнародної федерації спортивного орієнтування.
+        IOF - Міжнародної федерації спортивного орієнтування (<a href="https://orienteering.sport/" target="_blank">Orienteering</a>).
       </h2>
       <figure className={css.left}>
         <img src={img1} alt="" />

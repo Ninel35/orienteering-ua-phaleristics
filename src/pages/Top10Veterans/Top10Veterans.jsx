@@ -18,6 +18,10 @@ import img17 from "./images/17.jpg";
 import img18 from "./images/18.jpg";
 import img19 from "./images/19.jpg";
 import img20 from "./images/20.jpg";
+import img21 from "./images/21.jpg";
+import img22 from "./images/22.jpg";
+import img23 from "./images/23.jpg";
+import img24 from "./images/24.jpg";
 
 import css from "./Top10Veterans.module.css";
 
@@ -47,8 +51,17 @@ const Top10Veterans = () => {
         </div>
         <img src={img2} alt="" className={css.right} />
       </figure>
+      <figure className={css.left}>
+        <img src={img21} alt="" />
+        <div>
+          Перші для України медалі зимових Всесвітніх ігор майстрів (Winter World Masters Games - найбільший у світі
+          фестиваль зимових видів спорту для людей 30+ років), які 2020 року проходили у
+          Австрії, здобули <b>Кристина та Артем Стрижак</b>. Кристина виборола два "золота" (middle +
+          long W30), Артем – "срібло" (sprint М30) та дві "бронзи" (middle + long).
+        </div>
+      </figure>
       <h2 className={css.header}>
-        TOP-16 українських майстрів-орієнтувальників, складений на підставі
+        TOP українських майстрів-орієнтувальників, складений на підставі
         досягнень на ветеранських чемпіонатах світу IOF:
       </h2>
       <figure className={css.left}>
@@ -65,7 +78,7 @@ const Top10Veterans = () => {
               (middle + long W65);
             </li>
             <li>
-              двічі віце-чемпіонка світу серед ветеранів 2023, Словаччина (middle
+              двічі віце чемпіонка світу серед ветеранів 2023, Словаччина (middle
               W60), 2025, Іспанія (sprint W65).
             </li>
             <li>
@@ -88,7 +101,7 @@ const Top10Veterans = () => {
               M65); 2019, Латвія, (middle M70);
             </li>
             <li>
-              триразовий віце-чемпіон світу серед ветеранів: 2006, Австрія
+              триразовий віце чемпіон світу серед ветеранів: 2006, Австрія
               (М55); 2015, Швеція (sprint M65); 2018, Данія (long M65);
             </li>
             <li>
@@ -114,7 +127,7 @@ const Top10Veterans = () => {
               + long M35);
             </li>
             <li>
-              віце-чемпіон світу серед ветеранів: 2023, Словаччина (middle M35)
+              віце чемпіон світу серед ветеранів 2023, Словаччина (middle M35)
             </li>
           </ul>
         </div>
@@ -128,7 +141,7 @@ const Top10Veterans = () => {
           1984
           <ul>
             <li>
-              дворазова чемпіонка світу серед ветеранів: 2025, Іспанія (sprint + middle W40).
+              дворазова чемпіонка світу серед ветеранів 2025, Іспанія (sprint + middle W40).
             </li>
           </ul>
         </div>
@@ -145,7 +158,7 @@ const Top10Veterans = () => {
           <ul>
             <li>чемпіонка світу серед ветеранів 2010, Швейцарія (long W75);</li>
             <li>
-              чотириразова віце-чемпіонка світу серед ветеранів: 1995, Росія
+              чотириразова віце чемпіонка світу серед ветеранів: 1995, Росія
               (W60); 2006, Австрія (W70); 2008, Португалія (long W70); 2010,
               Швейцарія (sprint W75);
             </li>
@@ -168,11 +181,11 @@ const Top10Veterans = () => {
               чемпіон світу серед ветеранів 2023, Словаччина (sprint M40);
             </li>
             <li>
-              дворазовий віце-чемпіон світу серед ветеранів 2021, Угорщина
+              дворазовий віце чемпіон світу серед ветеранів 2021, Угорщина
               (sprint + long M35);
             </li>
             <li>
-              двічі бронзовий призер чемпіонатів світу 2021, Угорщина (middle M35); 2022, Італія (long M35).
+              двічі бронзовий призер чемпіонатів світу: 2021, Угорщина (middle M35); 2022, Італія (long M35).
             </li>
           </ul>
         </div>
@@ -200,7 +213,7 @@ const Top10Veterans = () => {
           1971
           <ul>
             <li>
-              дворазовий віце-чемпіон світу серед ветеранів 2012, Німеччина
+              дворазовий віце чемпіон світу серед ветеранів 2012, Німеччина
               (sprint + long M40).
             </li>
           </ul>
@@ -217,7 +230,7 @@ const Top10Veterans = () => {
           1985
           <ul>
             <li>
-              дворазова віце-чемпіонка світу серед ветеранів 2023, Словаччина
+              дворазова віце чемпіонка світу серед ветеранів 2023, Словаччина
               (sprint + middle W35).
             </li>
           </ul>
@@ -232,14 +245,14 @@ const Top10Veterans = () => {
           1957
           <ul>
             <li>
-              віце-чемпіон світу серед ветеранів 2022, Італія (long M65).
+              віце чемпіон світу серед ветеранів 2022, Італія (long M65).
             </li>
           </ul>
         </div>
-                <img src={img17} alt="" />
+        <img src={img17} alt="" />
       </figure>
       <figure className={css.left}>
-                <img src={img20} alt="" />
+        <img src={img20} alt="" />
         <div>
           <h3 className={css.name}>
             Олена Капара, Херсон /{" "}
@@ -248,7 +261,7 @@ const Top10Veterans = () => {
           1970
           <ul>
             <li>
-              Віце-чемпіонка світу 2025, Іспанія (long W55).
+              віце чемпіонка світу 2025, Іспанія (long W55).
             </li>
           </ul>
         </div>
@@ -262,15 +275,15 @@ const Top10Veterans = () => {
           1987
           <ul>
             <li>
-              триразовий бронзовий призер чемпіонатів світу серед ветеранів 2022, Італія (middle M35); 2023, Словаччина
+              триразовий бронзовий призер чемпіонатів світу серед ветеранів: 2022, Італія (middle M35); 2023, Словаччина
               (sprint M35), 2025, Іспанія (middle M35).
             </li>
           </ul>
         </div>
-                <img src={img18} alt="" />
+        <img src={img18} alt="" />
       </figure>
       <figure className={css.left}>
-                <img src={img11} alt="" />
+        <img src={img11} alt="" />
         <div>
           <h3 className={css.name}>
             Владислав Ласкаржевський, Дніпро /{" "}
@@ -332,6 +345,55 @@ const Top10Veterans = () => {
           </ul>
         </div>
         <img src={img15} alt="" />
+      </figure>
+      <figure className={css.left}>
+        <img src={img22} alt="" />
+        <div>
+          <h3 className={css.name}>
+            Олександра Пархоменко, Київ /{" "}
+            <span lang="en">Oleksandra Parkhomenko, Kyiv</span>
+          </h3>
+          1989
+          <ul>
+            <li>
+              чотириразова віце чемпіонка світу зі Ski-O серед ветеранів: 2024, Естонія (sprint W35);
+              2025, Німеччина (sprint + middle + long W35).
+            </li>
+          </ul>
+        </div>
+      </figure>
+      <figure className={css.right}>
+
+        <div>
+          <h3 className={css.name}>
+            Костянтин Марич, Київ /{" "}
+            <span lang="en">Kostiantyn Marych, Kyiv</span>
+          </h3>
+          1985
+          <ul>
+            <li>
+              дворазовий бронзовий призер чемпіонату світу зі Ski-O серед ветеранів: 2020, Австрія
+              (middle М35); 2022, Болгарія (long M35).
+            </li>
+          </ul>
+        </div>
+        <img src={img23} alt="" />
+      </figure>
+      <figure className={css.left}>
+        <img src={img24} alt="" />
+
+        <div>
+          <h3 className={css.name}>
+            Олександр Калінкін, Київ /{" "}
+            <span lang="en">Oleksandr Kalinkin, Kyiv</span>
+          </h3>
+          1974
+          <ul>
+            <li>
+              бронзовий призер чемпіонату світу Ski-O серед ветеранів 2022, Болгарія (sprint M45).
+            </li>
+          </ul>
+        </div>
       </figure>
       <img src={img16} alt="" className={css.group} />
     </article>
