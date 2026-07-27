@@ -13,9 +13,10 @@ import CardDetailsPage from "./pages/CardDetailsPage/CardDetailsPage";
 import Top10 from "./pages/Top10/Top10";
 import About from "./pages/About/About";
 import Top10Veterans from "./pages/Top10Veterans/Top10Veterans";
+import Heroes from "./pages/Heroes/Heroes";
 import NewsDetailsPage from "./pages/NewsDetailsPage/NewsDetailsPage";
 
-const router = createBrowserRouter(
+const router = createBrowserRouter( 
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       <Route path="news/:newsId" element={<NewsDetailsPage />} />
       <Route path="about" element={<About />} />
       <Route path="masters" element={<Top10Veterans />} />
+      <Route path="heroes" element={<Heroes />} />
       <Route path=":id" element={<CardDetailsPage />} />
     </Route>
   )

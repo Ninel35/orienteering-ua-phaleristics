@@ -59,6 +59,16 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink
+              to="/heroes"
+              onClick={() => {
+                setIsSidebarOpen(false);
+              }}
+            >
+              Герої України
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/top10"
               onClick={() => {
                 setIsSidebarOpen(false);
@@ -88,6 +98,9 @@ const Navigation = () => {
         </li>
         <li className={css.mobileOn}>
           <NavLink to="/about">Про сторінку</NavLink>
+        </li>
+        <li className={css.mobileOn}>
+          <NavLink to="/heroes">Герої України</NavLink>
         </li>
         <li className={css.mobileOn}>
           <NavLink to="/top10">Топ 10 спортсменів України</NavLink>
