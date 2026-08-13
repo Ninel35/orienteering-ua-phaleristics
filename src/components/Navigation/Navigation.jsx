@@ -64,7 +64,7 @@ const Navigation = () => {
                 setIsSidebarOpen(false);
               }}
             >
-              Герої України
+              Пам'яті Героїв
             </NavLink>
           </li>
           <li>
@@ -100,7 +100,7 @@ const Navigation = () => {
           <NavLink to="/about">Про сторінку</NavLink>
         </li>
         <li className={css.mobileOn}>
-          <NavLink to="/heroes">Герої України</NavLink>
+          <NavLink to="/heroes">Пам'яті Героїв</NavLink>
         </li>
         <li className={css.mobileOn}>
           <NavLink to="/top10">Топ 10 спортсменів України</NavLink>
