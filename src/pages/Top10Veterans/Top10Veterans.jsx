@@ -1,405 +1,92 @@
-import img1 from "./images/1.jpg";
-import img2 from "./images/2.jpg";
-import img3 from "./images/3.jpg";
-import img4 from "./images/4.jpg";
-import img5 from "./images/5.jpg";
-import img6 from "./images/6.jpg";
-import img7 from "./images/7.jpg";
-import img8 from "./images/8.jpg";
-import img9 from "./images/9.jpg";
-import img10 from "./images/10.jpg";
-import img11 from "./images/11.jpg";
-import img12 from "./images/12.jpg";
-import img13 from "./images/13.jpg";
-import img14 from "./images/14.jpg";
-import img15 from "./images/15.jpg";
-import img16 from "./images/16.jpg";
-import img17 from "./images/17.jpg";
-import img18 from "./images/18.jpg";
-import img19 from "./images/19.jpg";
-import img20 from "./images/20.jpg";
-import img21 from "./images/21.jpg";
-import img22 from "./images/22.jpg";
-import img23 from "./images/23.jpg";
-import img24 from "./images/24.jpg";
-
+import { veteransData } from "./veteransData";
 import css from "./Top10Veterans.module.css";
 
+const images = import.meta.glob("./images/*", {
+  eager: true,
+  import: "default",
+});
+
 const Top10Veterans = () => {
+  // Rozdzielamy dane na pierwszą część (osiągnięcia) i drugą (lista TOP)
+  const achievements = veteransData.filter((item) => item.category === "achievement");
+  const topList = veteransData.filter((item) => item.category !== "achievement");
+
+  const renderName = (nameString) => {
+    const parts = nameString.split(" / ");
+    if (parts.length < 2) return nameString;
+
+    return (
+      <>
+        {parts[0]} / <span lang="en">{parts[1]}</span>
+      </>
+    );
+  };
+
   return (
     <article className={css.article}>
       <h2 className={css.header}>
         Перші досягнення українських майстрів-ветеранів на чемпіонатах світу IOF
         (Veterans World Cup - World Masters Orienteering Championships).
       </h2>
-      <figure className={css.left}>
-        <img src={img1} alt="" />
-        <div>
-          Перші медалі Світового Кубку ветеранів IOF (Veterans World Cup) для
-          України – бронзові – вибороли 1990 року в Угорщині{" "}
-          <b>Еллаїда Степаненко та Геннадій Корчевський</b> (WM45).
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          Першу перемогу у Світовому Кубку ветеранів (Veterans World Cup) для
-          України виборола 1997 року у США <b>Тетяна Божко</b> (W40). <br />
-          <br />
-          Першу перемогу у чемпіонаті світу серед ветеранів (World Masters
-          Orienteering Championships) для України виборов 2014 року у Бразилії{" "}
-          <b>Микола Божко</b> (M65).
-        </div>
-        <img src={img2} alt="" className={css.right} />
-      </figure>
-      <figure className={css.left}>
-        <img src={img21} alt="" />
-        <div>
-          Перші для України медалі зимових Всесвітніх ігор майстрів (Winter World Masters Games - найбільший у світі
-          фестиваль зимових видів спорту для людей 30+ років), які 2020 року проходили у
-          Австрії, здобули <b>Кристина та Артем Стрижак</b>. Кристина виборола два "золота" (middle +
-          long W30), Артем – "срібло" (sprint М30) та дві "бронзи" (middle + long).
-        </div>
-      </figure>
+
+      {achievements.map((item, index) => {
+        const image = images[`./images/${item.image}`];
+        const isLeft = index % 2 === 0;
+
+        return (
+          <figure
+            key={item.id}
+            className={isLeft ? css.left : css.right}
+          >
+            {isLeft && <img src={image} alt="" />}
+            <div>
+              {item.text.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            {!isLeft && <img src={image} alt="" className={css.right} />}
+          </figure>
+        );
+      })}
+
       <h2 className={css.header}>
         TOP українських майстрів-орієнтувальників, складений на підставі
         досягнень на ветеранських чемпіонатах світу IOF:
       </h2>
-      <figure className={css.left}>
-        <img src={img7} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олена Рудакова, Дніпро /{" "}
-            <span lang="en">Olena Rudakova, Dnipro</span>
-          </h3>
-          1960
-          <ul>
-            <li>
-              триразова чемпіонка світу серед ветеранів 2021, Угорщина (middle W60), 2025, Іспанія
-              (middle + long W65);
-            </li>
-            <li>
-              двічі віцечемпіонка світу серед ветеранів 2023, Словаччина (middle
-              W60), 2025, Іспанія (sprint W65).
-            </li>
-            <li>
-              бронзова призерка чемпіонату світу серед ветеранів 2021, Угорщина
-              (long W60).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Микола Божко, Черкаси /{" "}
-            <span lang="en">Mykola Bozhko, Cherkasy</span>
-          </h3>
-          1949
-          <ul>
-            <li>
-              дворазовий чемпіон світу серед ветеранів: 2014, Бразилія, (long
-              M65); 2019, Латвія, (middle M70);
-            </li>
-            <li>
-              триразовий віцечемпіон світу серед ветеранів: 2006, Австрія
-              (М55); 2015, Швеція (sprint M65); 2018, Данія (long M65);
-            </li>
-            <li>
-              чотириразовий бронзовий призер чемпіонатів світу серед ветеранів:
-              2011, Угорщина (long М60); 2021, Угорщина (sprint M70); 2023,
-              Словаччина (long M70), 2025, Іспанія (sprint М75).
-            </li>
-          </ul>
-        </div>
-        <img src={img3} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img4} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олександр Марчук, Вінниця /{" "}
-            <span lang="en">Oleksandr Marchuk, Vinnytsia</span>
-          </h3>
-          1986
-          <ul>
-            <li>
-              триразовий чемпіон світу серед ветеранів: 2022, Італія (middle M35); 2023, Словаччина (sprint
-              + long M35);
-            </li>
-            <li>
-              віцечемпіон світу серед ветеранів 2023, Словаччина (middle M35)
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Надія Волинська, Львів /{" "}
-            <span lang="en">Nadiya Volynska, Lviv</span>
-          </h3>
-          1984
-          <ul>
-            <li>
-              дворазова чемпіонка світу серед ветеранів 2025, Іспанія (sprint + middle W40).
-            </li>
-          </ul>
-        </div>
-        <img src={img19} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img5} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Лілія Пох, Запоріжжя/{" "}
-            <span lang="en">Liliia Pokh, Zaporizhzhia</span>
-          </h3>
-          1934-2021
-          <ul>
-            <li>чемпіонка світу серед ветеранів 2010, Швейцарія (long W75);</li>
-            <li>
-              чотириразова віцечемпіонка світу серед ветеранів: 1995, Росія
-              (W60); 2006, Австрія (W70); 2008, Португалія (long W70); 2010,
-              Швейцарія (sprint W75);
-            </li>
-            <li>
-              бронзова медалістка чемпіонату світу серед ветеранів 1999, Данія
-              (W65).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Сергій Бабич, Мукачево-Львів /{" "}
-            <span lang="en">Serhiy Babych, Mukachevo-Lviv</span>
-          </h3>
-          1983
-          <ul>
-            <li>
-              чемпіон світу серед ветеранів 2023, Словаччина (sprint M40);
-            </li>
-            <li>
-              дворазовий віцечемпіон світу серед ветеранів 2021, Угорщина
-              (sprint + long M35);
-            </li>
-            <li>
-              двічі бронзовий призер чемпіонатів світу: 2021, Угорщина (middle M35); 2022, Італія (long M35).
-            </li>
-          </ul>
-        </div>
-        <img src={img6} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img8} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Тетяна Божко, Черкаси /{" "}
-            <span lang="en">Tetyana Bozhko, Cherkasy</span>
-          </h3>
-          1957
-          <ul>
-            <li>володарка ветеранського Кубку світу 1997, США (W40).</li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Юрій Омельченко, Чернівці /{" "}
-            <span lang="en">Yuri Omeltchenko, Chernivtsi</span>
-          </h3>
-          1971
-          <ul>
-            <li>
-              дворазовий віцечемпіон світу серед ветеранів 2012, Німеччина
-              (sprint + long M40).
-            </li>
-          </ul>
-        </div>
-        <img src={img9} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img10} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Марія Семак, Мукачево /{" "}
-            <span lang="en">Mariya Semak, Mukachevo</span>
-          </h3>
-          1985
-          <ul>
-            <li>
-              дворазова віцечемпіонка світу серед ветеранів 2023, Словаччина
-              (sprint + middle W35).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Іван Тумак, Чернівці /{" "}
-            <span lang="en">Ivan Tumak, Chernivtsi</span>
-          </h3>
-          1957
-          <ul>
-            <li>
-              віцечемпіон світу серед ветеранів 2022, Італія (long M65).
-            </li>
-          </ul>
-        </div>
-        <img src={img17} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img20} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олена Капара, Херсон /{" "}
-            <span lang="en">Olena Kapara, Kherson</span>
-          </h3>
-          1970
-          <ul>
-            <li>
-              віцечемпіонка світу 2025, Іспанія (long W55).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Олександр Чобан, Чернівці /{" "}
-            <span lang="en">Oleksandr Choban, Chernivtsi</span>
-          </h3>
-          1987
-          <ul>
-            <li>
-              триразовий бронзовий призер чемпіонатів світу серед ветеранів: 2022, Італія (middle M35); 2023, Словаччина
-              (sprint M35), 2025, Іспанія (middle M35).
-            </li>
-          </ul>
-        </div>
-        <img src={img18} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img11} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Владислав Ласкаржевський, Дніпро /{" "}
-            <span lang="en">Vladyslav Laskarzhevsky, Dnipro</span>
-          </h3>
-          1982
-          <ul>
-            <li>
-              дворазовий бронзовий призер чемпіонатів світу серед ветеранів:
-              2018, Данія (long M35), 2019, Латвія (long M35).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
-        <div>
-          <h3 className={css.name}>
-            Еллаїда Степаненко, Київ /{" "}
-            <span lang="en">Ellaida Stepanenko, Kyiv</span>
-          </h3>
-          1941
-          <ul>
-            <li>
-              бронзова призерка ветеранського Кубку світу 1990, Угорщина (W45).
-            </li>
-          </ul>
-        </div>
-        <img src={img13} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img14} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Геннадій Корчевський, Харків /{" "}
-            <span lang="en">Gennadiy Korchevsky, Kharkiv</span>
-          </h3>
-          1943-2024
-          <ul>
-            <li>
-              бронзовий призер ветеранського Кубку світу 1990, Угорщина (М45).
-            </li>
-          </ul>
-        </div>
 
-      </figure>
-      <figure className={css.right}>
+      {topList.map((hero, index) => {
+        const image = images[`./images/${hero.image}`];
+        const isLeft = index % 2 === 0;
 
-        <div>
-          <h3 className={css.name}>
-            Наталія Шарапова, Харків /{" "}
-            <span lang="en">Nataliia Sharapova, Kharkiv</span>
-          </h3>
-          1973
-          <ul>
-            <li>
-              бронзова призерка чемпіонату світу серед ветеранів 2023,
-              Словаччина (long W50).
-            </li>
-          </ul>
-        </div>
-        <img src={img15} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img22} alt="" />
-        <div>
-          <h3 className={css.name}>
-            Олександра Пархоменко, Київ /{" "}
-            <span lang="en">Oleksandra Parkhomenko, Kyiv</span>
-          </h3>
-          1989
-          <ul>
-            <li>
-              триразова чемпіонка світу зі Ski-O серед ветеранів 2026, Болгарія (sprint + middle + long W35);
-            </li>
-            <li>
-              чотириразова віцечемпіонка світу зі Ski-O серед ветеранів: 2024, Естонія (sprint W35);
-              2025, Німеччина (sprint + middle + long W35).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <figure className={css.right}>
+        return (
+          <figure
+            key={hero.id}
+            className={isLeft ? css.left : css.right}
+          >
+            {isLeft && <img src={image} alt="" />}
+            <div>
+              <h3 className={css.name}>{renderName(hero.name)}</h3>
+              {hero.year}
+              <ul>
+                {hero.achievements.map((ach, i) => (
+                  <li key={i}>{ach}</li>
+                ))}
+              </ul>
+            </div>
+            {!isLeft && <img src={image} alt="" />}
+          </figure>
+        );
+      })}
 
-        <div>
-          <h3 className={css.name}>
-            Костянтин Марич, Київ /{" "}
-            <span lang="en">Kostiantyn Marych, Kyiv</span>
-          </h3>
-          1985
-          <ul>
-            <li>
-              дворазовий бронзовий призер чемпіонату світу зі Ski-O серед ветеранів: 2020, Австрія
-              (middle М35); 2022, Болгарія (long M35).
-            </li>
-          </ul>
-        </div>
-        <img src={img23} alt="" />
-      </figure>
-      <figure className={css.left}>
-        <img src={img24} alt="" />
-
-        <div>
-          <h3 className={css.name}>
-            Олександр Калінкін, Київ /{" "}
-            <span lang="en">Oleksandr Kalinkin, Kyiv</span>
-          </h3>
-          1974
-          <ul>
-            <li>
-              бронзовий призер чемпіонату світу Ski-O серед ветеранів 2022, Болгарія (sprint M45).
-            </li>
-          </ul>
-        </div>
-      </figure>
-      <img src={img16} alt="" className={css.group} />
+      {images["./images/16.jpg"] && (
+        <img
+          src={images["./images/16.jpg"]}
+          alt=""
+          className={css.group}
+        />
+      )}
     </article>
   );
 };
+
 export default Top10Veterans;
